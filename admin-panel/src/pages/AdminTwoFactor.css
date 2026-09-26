@@ -1,0 +1,61 @@
+.admin-2fa-page{
+    position:relative;width:100%;min-height:100dvh;overflow:hidden;
+    display:grid;place-items:center;padding:30px 18px;
+    background:
+        radial-gradient(circle at 15% 15%,rgba(37,99,235,.16),transparent 28%),
+        radial-gradient(circle at 85% 80%,rgba(99,102,241,.14),transparent 30%),
+        linear-gradient(135deg,#07152f 0%,#0b1d3d 48%,#102b5b 100%);
+    font-family:Arial,Helvetica,sans-serif;
+}
+.admin-2fa-card{
+    position:relative;z-index:2;width:min(470px,100%);padding:38px 38px 28px;
+    border:1px solid rgba(255,255,255,.14);border-radius:24px;
+    background:rgba(255,255,255,.08);box-shadow:0 30px 90px rgba(0,0,0,.35);
+    backdrop-filter:blur(22px);color:#fff;text-align:center;
+}
+.admin-2fa-icon{
+    width:64px;height:64px;display:grid;place-items:center;margin:0 auto 16px;
+    border:1px solid rgba(147,197,253,.3);border-radius:18px;
+    background:linear-gradient(135deg,rgba(59,130,246,.28),rgba(99,102,241,.15));
+    color:#93c5fd;font-size:25px;box-shadow:0 12px 28px rgba(37,99,235,.16);
+}
+.admin-2fa-badge{display:inline-flex;align-items:center;gap:7px;margin-bottom:10px;color:#93c5fd;font-size:9px;font-weight:800;letter-spacing:1.5px}
+.admin-2fa-badge span{width:6px;height:6px;border-radius:50%;background:#60a5fa;box-shadow:0 0 12px #60a5fa}
+.admin-2fa-card h1{margin:0;font-size:28px;line-height:1.2;letter-spacing:-.5px}
+.admin-2fa-description{max-width:360px;margin:10px auto 20px;color:#aebed4;font-size:12px;line-height:1.65}
+.admin-2fa-description strong{display:block;margin-top:3px;color:#e7effa;font-weight:700;word-break:break-word}
+.admin-2fa-alert{display:flex;align-items:flex-start;gap:9px;margin-bottom:16px;padding:11px 12px;border-radius:11px;text-align:left;font-size:10px;line-height:1.5}
+.admin-2fa-alert.error{border:1px solid rgba(248,113,113,.25);background:rgba(127,29,29,.2);color:#fecaca}
+.admin-2fa-alert.success{border:1px solid rgba(52,211,153,.22);background:rgba(6,78,59,.2);color:#a7f3d0}
+.admin-otp-boxes{display:grid;grid-template-columns:repeat(6,1fr);gap:9px;margin:5px 0 18px}
+.admin-otp-box{
+    width:100%;aspect-ratio:1/1;min-width:0;border:1px solid rgba(255,255,255,.18);
+    border-radius:12px;outline:none;background:rgba(255,255,255,.07);color:#fff;
+    text-align:center;font-size:21px;font-weight:800;caret-color:#93c5fd;
+    transition:border-color .2s ease,box-shadow .2s ease,transform .2s ease,background .2s ease;
+}
+.admin-otp-box:hover{background:rgba(255,255,255,.1);border-color:rgba(147,197,253,.4)}
+.admin-otp-box:focus{border-color:#60a5fa;background:rgba(59,130,246,.13);box-shadow:0 0 0 3px rgba(59,130,246,.13),0 8px 22px rgba(0,0,0,.12);transform:translateY(-1px)}
+.admin-2fa-verify{
+    width:100%;height:48px;display:flex;align-items:center;justify-content:center;gap:8px;
+    border:0;border-radius:11px;background:linear-gradient(135deg,#3b82f6,#4f46e5);
+    color:#fff;font-size:12px;font-weight:700;cursor:pointer;
+    box-shadow:0 10px 24px rgba(37,99,235,.22);transition:transform .2s ease,box-shadow .2s ease,opacity .2s ease;
+}
+.admin-2fa-verify:hover:not(:disabled){transform:translateY(-1px);box-shadow:0 14px 28px rgba(37,99,235,.28)}
+.admin-2fa-verify:disabled{opacity:.65;cursor:not-allowed}
+.admin-2fa-actions{display:grid;gap:7px;margin-top:12px}
+.admin-2fa-resend,.admin-2fa-back{width:100%;height:39px;border-radius:9px;font-size:10px;font-weight:650;cursor:pointer}
+.admin-2fa-resend{border:1px solid rgba(147,197,253,.2);background:rgba(255,255,255,.06);color:#bfdbfe}
+.admin-2fa-resend:hover:not(:disabled){background:rgba(255,255,255,.1)}
+.admin-2fa-resend:disabled{opacity:.5;cursor:not-allowed}
+.admin-2fa-back{border:0;background:transparent;color:#94a3b8}
+.admin-2fa-back:hover:not(:disabled){color:#e2e8f0}
+.admin-2fa-security{display:flex;align-items:center;justify-content:center;gap:7px;margin-top:17px;padding-top:15px;border-top:1px solid rgba(255,255,255,.09);color:#8194ad;font-size:9px;line-height:1.45}
+.admin-2fa-security i{color:#60a5fa}
+.admin-2fa-orbit{position:absolute;border:1px solid rgba(147,197,253,.09);border-radius:50%;pointer-events:none}
+.admin-2fa-orbit-one{width:430px;height:430px;top:-220px;right:-160px}
+.admin-2fa-orbit-two{width:320px;height:320px;bottom:-190px;left:-130px}
+.admin-2fa-spinner{width:13px;height:13px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:admin2faSpin .7s linear infinite}
+@keyframes admin2faSpin{to{transform:rotate(360deg)}}
+@media(max-width:520px){.admin-2fa-page{padding:18px 12px}.admin-2fa-card{padding:28px 18px 22px;border-radius:20px}.admin-2fa-card h1{font-size:23px}.admin-2fa-description{font-size:11px}.admin-otp-boxes{gap:6px}.admin-otp-box{border-radius:9px;font-size:18px}}

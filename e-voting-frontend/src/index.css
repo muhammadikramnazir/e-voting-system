@@ -1,0 +1,893 @@
+/* =====================================================
+   DISTRICT BAR ASSOCIATION
+   GLOBAL DESIGN SYSTEM
+===================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap");
+
+
+/* =====================================================
+   ROOT
+===================================================== */
+
+:root {
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+    color: #17253a;
+    background: #f4f7fb;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+
+    --gold: #f6bb45;
+    --gold-dark: #d69b26;
+
+    --navy: #071725;
+
+    --muted: #7e8c9d;
+
+    --line: #e3e9f0;
+
+    --blue: #3d82df;
+    --green: #35ad82;
+    --red: #e95454;
+}
+
+
+/* =====================================================
+   GLOBAL RESET
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html,
+body,
+#root {
+    margin: 0;
+
+    width: 100%;
+    min-height: 100%;
+}
+
+
+body {
+    margin: 0;
+
+    background: #f4f7fb;
+
+    color: #17253a;
+
+    font-size: 15px;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+/* =====================================================
+   COMMON CARD
+===================================================== */
+
+.dba-card {
+    background: #ffffff;
+
+    border: 1px solid var(--line);
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 14px rgba(19, 39, 62, 0.035);
+}
+
+
+/* =====================================================
+   PAGE HEADER
+===================================================== */
+
+.dba-page-title {
+    margin: 0 !important;
+
+    color: #14233a !important;
+
+    font-size: 27px !important;
+
+    line-height: 1.2 !important;
+
+    font-weight: 700 !important;
+
+    letter-spacing: -0.35px;
+}
+
+
+.dba-page-sub {
+    margin: 6px 0 20px !important;
+
+    color: #7f8c9c !important;
+
+    font-size: 14px !important;
+
+    line-height: 1.55 !important;
+
+    font-weight: 400 !important;
+}
+
+
+/* =====================================================
+   GLOBAL PAGE CONTENT TYPOGRAPHY
+   These rules increase small text across all pages
+===================================================== */
+
+.dba-content h1 {
+    font-size: 27px !important;
+
+    line-height: 1.2 !important;
+}
+
+
+.dba-content h2 {
+    font-size: 21px !important;
+
+    line-height: 1.3 !important;
+}
+
+
+.dba-content h3 {
+    font-size: 18px !important;
+
+    line-height: 1.35 !important;
+}
+
+
+.dba-content h4 {
+    font-size: 15px !important;
+
+    line-height: 1.4 !important;
+}
+
+
+.dba-content p {
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   SECTION HEADINGS
+===================================================== */
+
+.db-section-head h3,
+.sp-section,
+.settings-section-title {
+    font-size: 19px !important;
+
+    line-height: 1.35 !important;
+
+    font-weight: 700 !important;
+
+    color: #172b40;
+}
+
+
+/* =====================================================
+   CARD HEADINGS
+===================================================== */
+
+.dba-content .el-text h4,
+.dba-content .db-row-text h4,
+.dba-content .cd-info h3,
+.dba-content .cv-info h4,
+.dba-content .mp-top h2,
+.dba-content .nt-row h3 {
+    font-size: 15px !important;
+
+    line-height: 1.4 !important;
+
+    font-weight: 700 !important;
+
+    color: #172b40;
+}
+
+
+/* =====================================================
+   CARD DESCRIPTION / SUBTEXT
+===================================================== */
+
+.dba-content .el-text p,
+.dba-content .db-row-text p,
+.dba-content .cd-role,
+.dba-content .cd-quote,
+.dba-content .cv-info p,
+.dba-content .nt-row p {
+    font-size: 12.5px !important;
+
+    line-height: 1.5 !important;
+
+    color: #7d8c9c;
+}
+
+
+/* =====================================================
+   CARD META INFORMATION
+===================================================== */
+
+.dba-content .el-text>div,
+.dba-content .db-row-text>div,
+.dba-content .cv-info blockquote {
+    font-size: 11.5px !important;
+
+    line-height: 1.5 !important;
+}
+
+
+/* =====================================================
+   COMMON GOLD LINK
+===================================================== */
+
+.dba-link-gold {
+    color: #d89b27;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+
+    font-weight: 700;
+
+    transition:
+        color 0.18s ease,
+        transform 0.18s ease;
+}
+
+
+.dba-link-gold:hover {
+    color: #b77c12;
+}
+
+
+/* =====================================================
+   COMMON BUTTONS
+===================================================== */
+
+.dba-btn-gold,
+.dba-btn-outline {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    min-height: 40px;
+
+    padding: 10px 16px;
+
+    border-radius: 7px;
+
+    font-size: 13px !important;
+
+    line-height: 1.2 !important;
+
+    font-weight: 700 !important;
+
+    transition:
+        background 0.18s ease,
+        color 0.18s ease,
+        border-color 0.18s ease,
+        box-shadow 0.18s ease,
+        transform 0.18s ease;
+}
+
+
+/* Gold button */
+
+.dba-btn-gold {
+    background: #f8c75f;
+
+    border: 1px solid #f8c75f;
+
+    color: #19263a;
+}
+
+
+.dba-btn-gold:hover {
+    background: #ffd477;
+
+    border-color: #ffd477;
+
+    color: #19263a;
+
+    box-shadow:
+        0 5px 13px rgba(246, 187, 69, 0.18);
+
+    transform: translateY(-1px);
+}
+
+
+/* Outline button */
+
+.dba-btn-outline {
+    background: #ffffff;
+
+    border: 1px solid #e1ad3f;
+
+    color: #23334b;
+}
+
+
+.dba-btn-outline:hover {
+    background: #fff9ea;
+
+    color: #b57b12;
+
+    border-color: #dba436;
+
+    box-shadow:
+        0 4px 10px rgba(246, 187, 69, 0.10);
+}
+
+
+/* =====================================================
+   TABS
+===================================================== */
+
+.dba-tabs {
+    display: flex;
+
+    gap: 7px;
+
+    flex-wrap: wrap;
+}
+
+
+.dba-tab {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    min-height: 40px;
+
+    padding: 9px 15px;
+
+    border: 1px solid #e1e7ee;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #718096;
+
+    font-size: 13px !important;
+
+    line-height: 1.2 !important;
+
+    font-weight: 600 !important;
+
+    cursor: pointer;
+
+    transition:
+        background 0.18s ease,
+        color 0.18s ease,
+        border-color 0.18s ease,
+        box-shadow 0.18s ease,
+        transform 0.18s ease;
+}
+
+
+.dba-tab:hover {
+    background: #fffaf0;
+
+    color: #25364a;
+
+    border-color: #efd18e;
+}
+
+
+.dba-tab.active {
+    background: #fff3d7;
+
+    color: #19263a;
+
+    border-color: #f5d38b;
+
+    box-shadow:
+        0 3px 9px rgba(246, 187, 69, 0.12);
+}
+
+
+/* =====================================================
+   FORM LABELS
+===================================================== */
+
+.dba-content label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #26384e;
+
+    font-size: 13px !important;
+
+    line-height: 1.4 !important;
+
+    font-weight: 600 !important;
+}
+
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+.dba-input,
+.dba-select,
+.dba-textarea {
+    width: 100%;
+
+    border: 1px solid #dfe6ee;
+
+    background: #ffffff;
+
+    border-radius: 7px;
+
+    color: #25364e;
+
+    padding: 10px 12px;
+
+    font-size: 13px !important;
+
+    line-height: 1.4 !important;
+
+    outline: none;
+
+    transition:
+        border-color 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+
+.dba-input:focus,
+.dba-select:focus,
+.dba-textarea:focus {
+    border-color: #e0ad46;
+
+    box-shadow:
+        0 0 0 3px rgba(224, 173, 70, 0.12);
+}
+
+
+.dba-input::placeholder,
+.dba-textarea::placeholder {
+    color: #a4afbd;
+
+    font-size: 13px;
+}
+
+
+.dba-textarea {
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+
+/* =====================================================
+   DATE CARD
+===================================================== */
+
+.dba-date {
+    width: 58px;
+
+    min-width: 58px;
+
+    padding: 7px 0;
+
+    text-align: center;
+
+    line-height: 1.08;
+
+    border: 1px solid #e2e8ef;
+
+    border-radius: 8px;
+
+    background: #f5f8fb;
+}
+
+
+.dba-date .m {
+    font-size: 10px !important;
+
+    font-weight: 800;
+
+    color: #d99a25;
+
+    letter-spacing: 0.7px;
+}
+
+
+.dba-date .d {
+    margin-top: 2px;
+
+    font-size: 22px !important;
+
+    font-weight: 800;
+
+    color: #17263d;
+}
+
+
+.dba-date .y {
+    margin-top: 3px;
+
+    font-size: 10px !important;
+
+    color: #8793a2;
+}
+
+
+/* =====================================================
+   COMMON SMALL INFORMATION
+===================================================== */
+
+.dba-content small {
+    font-size: 11px !important;
+
+    line-height: 1.4 !important;
+}
+
+
+/* =====================================================
+   COMMON LIST / META TEXT
+===================================================== */
+
+.dba-content time {
+    font-size: 11.5px !important;
+
+    line-height: 1.4 !important;
+}
+
+
+.dba-content span {
+    line-height: 1.4;
+}
+
+
+/* =====================================================
+   QUOTE / COURT IMAGE BAND
+===================================================== */
+
+.dba-quote-band {
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 110px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 20px 26px;
+
+    border-radius: 10px;
+
+    color: #ffffff;
+
+    background:
+        url("/images/Lahore-High-Court.jpg") center 58% / cover no-repeat;
+}
+
+
+.dba-quote-band::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(90deg,
+            rgba(5, 18, 32, 0.92),
+            rgba(5, 18, 32, 0.38));
+}
+
+
+.dba-quote-band span {
+    position: relative;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 18px !important;
+
+    font-style: italic;
+
+    line-height: 1.35 !important;
+}
+
+
+/* =====================================================
+   DASHBOARD STAT / COMMON LARGE VALUES
+===================================================== */
+
+.dba-content strong {
+    line-height: 1.3;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 991px) {
+
+    .dba-page-title,
+    .dba-content h1 {
+        font-size: 25px !important;
+    }
+
+
+    .dba-page-sub {
+        font-size: 13.5px !important;
+
+        margin-bottom: 18px !important;
+    }
+
+
+    .dba-content h2 {
+        font-size: 20px !important;
+    }
+
+
+    .dba-content h3 {
+        font-size: 17px !important;
+    }
+
+
+    .dba-content h4 {
+        font-size: 15px !important;
+    }
+
+
+    .dba-btn-gold,
+    .dba-btn-outline {
+        font-size: 12.5px !important;
+
+        min-height: 39px;
+
+        padding: 9px 14px;
+    }
+
+
+    .dba-tab {
+        font-size: 12.5px !important;
+
+        min-height: 39px;
+
+        padding: 9px 14px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 575px) {
+
+    .dba-page-title,
+    .dba-content h1 {
+        font-size: 23px !important;
+
+        letter-spacing: -0.2px;
+    }
+
+
+    .dba-page-sub {
+        font-size: 13px !important;
+
+        line-height: 1.5 !important;
+
+        margin-top: 5px !important;
+
+        margin-bottom: 17px !important;
+    }
+
+
+    .dba-content h2 {
+        font-size: 19px !important;
+    }
+
+
+    .dba-content h3 {
+        font-size: 16px !important;
+    }
+
+
+    .dba-content h4 {
+        font-size: 14.5px !important;
+    }
+
+
+    .dba-content .el-text p,
+    .dba-content .db-row-text p,
+    .dba-content .cd-role,
+    .dba-content .cd-quote,
+    .dba-content .cv-info p,
+    .dba-content .nt-row p {
+        font-size: 12px !important;
+    }
+
+
+    .dba-btn-gold,
+    .dba-btn-outline {
+        font-size: 12px !important;
+
+        min-height: 38px;
+
+        padding: 9px 13px;
+    }
+
+
+    .dba-tab {
+        font-size: 12px !important;
+
+        min-height: 38px;
+
+        padding: 9px 12px;
+    }
+
+
+    .dba-content label {
+        font-size: 12.5px !important;
+    }
+
+
+    .dba-input,
+    .dba-select,
+    .dba-textarea {
+        font-size: 12.5px !important;
+    }
+
+
+    .dba-date {
+        width: 54px;
+
+        min-width: 54px;
+    }
+
+
+    .dba-date .m {
+        font-size: 9px !important;
+    }
+
+
+    .dba-date .d {
+        font-size: 20px !important;
+    }
+
+
+    .dba-date .y {
+        font-size: 9px !important;
+    }
+
+
+    .dba-quote-band {
+        min-height: 92px;
+
+        padding: 17px 20px;
+    }
+
+
+    .dba-quote-band span {
+        font-size: 15px !important;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 450px) {
+
+    .dba-page-title,
+    .dba-content h1 {
+        font-size: 22px !important;
+    }
+
+
+    .dba-page-sub {
+        font-size: 12.5px !important;
+    }
+
+
+    .dba-content h2 {
+        font-size: 18px !important;
+    }
+
+
+    .dba-content h3 {
+        font-size: 15.5px !important;
+    }
+
+
+    .dba-content h4 {
+        font-size: 14px !important;
+    }
+
+
+    .dba-content .el-text p,
+    .dba-content .db-row-text p,
+    .dba-content .cd-role,
+    .dba-content .cd-quote,
+    .dba-content .cv-info p,
+    .dba-content .nt-row p {
+        font-size: 11.5px !important;
+    }
+
+
+    .dba-tab {
+        font-size: 11.5px !important;
+
+        min-height: 36px;
+
+        padding: 8px 11px;
+    }
+
+
+    .dba-btn-gold,
+    .dba-btn-outline {
+        font-size: 11.5px !important;
+
+        min-height: 37px;
+
+        padding: 8px 12px;
+    }
+
+
+    .dba-content label {
+        font-size: 12px !important;
+    }
+
+
+    .dba-input,
+    .dba-select,
+    .dba-textarea {
+        font-size: 12px !important;
+    }
+
+
+    .dba-quote-band {
+        min-height: 86px;
+
+        padding: 15px 17px;
+    }
+
+
+    .dba-quote-band span {
+        font-size: 14px !important;
+    }
+}

@@ -1,0 +1,278 @@
+/* =====================================================
+   APP GLOBAL STYLES
+===================================================== */
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+/* =====================================================
+   COMMON PAGE WRAPPER
+===================================================== */
+
+.page-container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   COMMON PAGE HEADER
+===================================================== */
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.page-header-left {
+  min-width: 0;
+}
+
+.page-header h1,
+.page-header h2,
+.page-header h3 {
+  margin: 0;
+  color: #111827;
+  font-weight: 700;
+}
+
+.page-header p {
+  margin: 6px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+
+/* =====================================================
+   COMMON CARD
+===================================================== */
+
+.app-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+}
+
+
+/* =====================================================
+   COMMON BUTTONS
+===================================================== */
+
+.app-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  min-height: 40px;
+  padding: 9px 16px;
+
+  border: 0;
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.app-btn:hover {
+  transform: translateY(-1px);
+}
+
+.app-btn:active {
+  transform: translateY(0);
+}
+
+.app-btn-primary {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.app-btn-primary:hover {
+  background: #1d4ed8;
+}
+
+.app-btn-secondary {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.app-btn-secondary:hover {
+  background: #e5e7eb;
+}
+
+.app-btn-danger {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+.app-btn-danger:hover {
+  background: #b91c1c;
+}
+
+
+/* =====================================================
+   COMMON FORM ELEMENTS
+===================================================== */
+
+.app-input,
+.app-select,
+.app-textarea {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #111827;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.app-input,
+.app-select {
+  min-height: 42px;
+  padding: 9px 12px;
+}
+
+.app-textarea {
+  min-height: 100px;
+  padding: 10px 12px;
+  resize: vertical;
+}
+
+.app-input:focus,
+.app-select:focus,
+.app-textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+
+/* =====================================================
+   COMMON BADGES
+===================================================== */
+
+.app-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 26px;
+  padding: 4px 9px;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.app-badge-success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.app-badge-warning {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.app-badge-danger {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.app-badge-info {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.app-badge-secondary {
+  background: #f3f4f6;
+  color: #4b5563;
+}
+
+
+/* =====================================================
+   COMMON EMPTY STATE
+===================================================== */
+
+.app-empty-state {
+  padding: 50px 25px;
+  text-align: center;
+  color: #6b7280;
+}
+
+.app-empty-state i {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 40px;
+  color: #9ca3af;
+}
+
+.app-empty-state h3 {
+  margin: 0 0 6px;
+  color: #374151;
+  font-size: 18px;
+}
+
+.app-empty-state p {
+  margin: 0;
+  font-size: 14px;
+}
+
+
+/* =====================================================
+   RESPONSIVE PAGE HEADER
+===================================================== */
+
+@media (max-width: 768px) {
+  .page-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .page-header-right {
+    width: 100%;
+  }
+
+  .page-header-right .app-btn {
+    width: 100%;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 576px) {
+  .page-container {
+    width: 100%;
+  }
+
+  .app-card {
+    border-radius: 10px;
+  }
+
+  .app-btn {
+    min-height: 42px;
+  }
+}

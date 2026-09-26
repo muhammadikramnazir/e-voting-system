@@ -1,0 +1,890 @@
+/* =====================================================
+   DISTRICT BAR ASSOCIATION
+   PREMIUM AUTH SYSTEM
+===================================================== */
+
+.auth-page {
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background: #071725;
+
+  color: #fff;
+}
+
+
+/* =====================================================
+   BACKGROUND
+===================================================== */
+
+.auth-background {
+  position: absolute;
+
+  inset: -3%;
+
+  background:
+    url("/images/Lahore-High-Court.jpg") center / cover no-repeat;
+
+  transform: scale(1.04);
+
+  animation:
+    auth-bg-zoom 16s ease-in-out infinite alternate;
+
+  z-index: 0;
+}
+
+
+@keyframes auth-bg-zoom {
+
+  from {
+    transform: scale(1.04);
+  }
+
+  to {
+    transform: scale(1.09);
+  }
+}
+
+
+/* =====================================================
+   OVERLAY
+===================================================== */
+
+.auth-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(115deg,
+      rgba(3, 14, 25, .97),
+      rgba(5, 22, 37, .91),
+      rgba(5, 20, 34, .86));
+
+  z-index: 1;
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.auth-container {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 18px 38px;
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.auth-brand {
+  width: fit-content;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  flex-shrink: 0;
+
+  color: #fff;
+
+  text-decoration: none;
+}
+
+
+.auth-brand:hover {
+  color: #fff;
+}
+
+
+.auth-brand-icon {
+  width: 39px;
+  height: 39px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(246, 187, 69, .65);
+
+  border-radius: 10px;
+
+  background: rgba(246, 187, 69, .09);
+
+  color: #f6bb45;
+}
+
+
+.auth-brand-icon i {
+  font-size: 19px;
+}
+
+
+.auth-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.auth-brand-text strong {
+  color: #fff;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+
+.auth-brand-text small {
+  margin-top: 3px;
+
+  color: #9daab8;
+
+  font-size: 7.5px;
+
+  letter-spacing: .25px;
+}
+
+
+/* =====================================================
+   MAIN BOX
+===================================================== */
+
+.auth-box {
+  position: relative;
+
+  width: min(1040px, 100%);
+
+  height: min(590px,
+      calc(100vh - 78px));
+
+  min-height: 490px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  border: 1px solid rgba(255, 255, 255, .17);
+
+  background: rgba(7, 24, 39, .55);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, .38);
+
+  backdrop-filter: blur(15px);
+
+  animation:
+    auth-box-enter .65s cubic-bezier(.22, .61, .36, 1) both;
+}
+
+
+@keyframes auth-box-enter {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(20px) scale(.985);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0) scale(1);
+  }
+}
+
+
+/* =====================================================
+   VISUAL SIDE
+===================================================== */
+
+.auth-visual {
+  position: relative;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  padding: 42px;
+
+  border-right: 1px solid rgba(255, 255, 255, .10);
+
+  isolation: isolate;
+}
+
+
+/* =====================================================
+   VISUAL IMAGE
+===================================================== */
+
+.auth-visual-bg {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    url("/images/Lahore-High-Court.jpg") center / cover no-repeat;
+
+  opacity: .22;
+
+  z-index: -2;
+
+  transition:
+    transform .8s ease;
+}
+
+
+.auth-register .auth-visual-bg {
+  transform: scale(1.07);
+}
+
+
+.auth-login .auth-visual-bg {
+  transform: scale(1.02);
+}
+
+
+/* =====================================================
+   VISUAL OVERLAY
+===================================================== */
+
+.auth-visual-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(135deg,
+      rgba(3, 19, 33, .97),
+      rgba(5, 27, 44, .91));
+
+  z-index: -1;
+}
+
+
+/* =====================================================
+   VISUAL CONTENT
+===================================================== */
+
+.auth-visual-content {
+  position: relative;
+
+  z-index: 3;
+
+  width: 100%;
+
+  max-width: 390px;
+
+  animation:
+    auth-visual-enter .65s cubic-bezier(.22, .61, .36, 1) both;
+}
+
+
+@keyframes auth-visual-enter {
+
+  from {
+    opacity: 0;
+
+    transform: translateX(-32px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateX(0);
+  }
+}
+
+
+/* Register animation */
+
+.auth-register .auth-visual-content {
+  animation-name: auth-visual-register;
+}
+
+
+@keyframes auth-visual-register {
+
+  from {
+    opacity: 0;
+
+    transform: translateX(32px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateX(0);
+  }
+}
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.auth-visual-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  border: 1px solid rgba(246, 187, 69, .58);
+
+  border-radius: 13px;
+
+  background: rgba(246, 187, 69, .09);
+
+  color: #f6bb45;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, .18);
+}
+
+
+.auth-visual-icon i {
+  font-size: 22px;
+}
+
+
+/* =====================================================
+   LABEL
+===================================================== */
+
+.auth-visual-label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #f6bb45;
+
+  font-size: 8.5px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.7px;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.auth-visual h1 {
+  margin: 0;
+
+  color: #fff;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 41px;
+
+  line-height: 1.04;
+
+  font-weight: 600;
+
+  letter-spacing: -.6px;
+}
+
+
+.auth-visual h1 span {
+  display: block;
+
+  color: #f6bb45;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.auth-visual p {
+  max-width: 355px;
+
+  margin: 17px 0 0;
+
+  color: #b4c1ce;
+
+  font-size: 11px;
+
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   LINE
+===================================================== */
+
+.auth-visual-line {
+  width: 55px;
+  height: 2px;
+
+  margin: 20px 0 14px;
+
+  border-radius: 5px;
+
+  background: #f6bb45;
+}
+
+
+/* =====================================================
+   SECURITY
+===================================================== */
+
+.auth-visual-footer {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  color: #aebbc7;
+
+  font-size: 8.5px;
+}
+
+
+.auth-visual-footer i {
+  color: #35b886;
+
+  font-size: 12px;
+}
+
+
+/* =====================================================
+   QUOTE
+   NOW INSIDE BOX
+===================================================== */
+
+.auth-quote {
+  position: absolute;
+
+  left: 42px;
+  bottom: 27px;
+
+  z-index: 5;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 5px;
+
+  max-width: 190px;
+
+  color: #d3dbe3;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 11px;
+
+  font-style: italic;
+
+  line-height: 1.35;
+}
+
+
+.auth-quote i {
+  flex-shrink: 0;
+
+  color: #f6bb45;
+
+  font-size: 15px;
+}
+
+
+/* =====================================================
+   ORBITS
+===================================================== */
+
+.auth-orbit {
+  position: absolute;
+
+  border: 1px solid rgba(246, 187, 69, .12);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  z-index: 2;
+}
+
+
+.auth-orbit-one {
+  width: 290px;
+  height: 290px;
+
+  right: -155px;
+  bottom: -135px;
+}
+
+
+.auth-orbit-two {
+  width: 205px;
+  height: 205px;
+
+  right: -110px;
+  bottom: -90px;
+}
+
+
+.auth-orbit-three {
+  width: 115px;
+  height: 115px;
+
+  right: -62px;
+  bottom: -48px;
+}
+
+
+/* =====================================================
+   FORM SIDE
+===================================================== */
+
+.auth-form-area {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px 38px;
+
+  background: rgba(255, 255, 255, .975);
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   FORM INNER
+===================================================== */
+
+.auth-form-inner {
+  width: 100%;
+
+  max-width: 410px;
+
+  max-height: 100%;
+
+  color: #17253a;
+
+  animation:
+    auth-form-enter .65s cubic-bezier(.22, .61, .36, 1) both;
+}
+
+
+@keyframes auth-form-enter {
+
+  from {
+    opacity: 0;
+
+    transform: translateX(28px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateX(0);
+  }
+}
+
+
+.auth-register .auth-form-inner {
+  animation-name: auth-form-register;
+}
+
+
+@keyframes auth-form-register {
+
+  from {
+    opacity: 0;
+
+    transform: translateX(-28px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateX(0);
+  }
+}
+
+
+/* =====================================================
+   MOBILE BRAND
+===================================================== */
+
+.auth-mobile-brand {
+  display: none;
+}
+
+
+/* =====================================================
+   SWITCH
+===================================================== */
+
+.auth-switch {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  margin-top: 11px;
+
+  color: #8995a2;
+
+  font-size: 9px;
+}
+
+
+.auth-switch button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 4px;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #d49a25;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: color .2s ease;
+}
+
+
+.auth-switch button:hover {
+  color: #ad7811;
+}
+
+
+.auth-switch button i {
+  font-size: 9px;
+
+  transition: transform .2s ease;
+}
+
+
+.auth-switch button:hover i {
+  transform: translateX(3px);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 950px) {
+
+  .auth-container {
+    padding: 15px 24px;
+  }
+
+
+  .auth-box {
+    height: min(570px,
+        calc(100vh - 68px));
+  }
+
+
+  .auth-visual {
+    padding: 32px;
+  }
+
+
+  .auth-visual h1 {
+    font-size: 36px;
+  }
+
+
+  .auth-form-area {
+    padding: 22px 28px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 760px) {
+
+  .auth-page {
+    height: auto;
+
+    min-height: 100vh;
+
+    overflow-y: auto;
+  }
+
+
+  .auth-container {
+    height: auto;
+
+    min-height: 100vh;
+
+    padding: 15px 12px 20px;
+  }
+
+
+  .auth-brand {
+    margin-bottom: 12px;
+  }
+
+
+  .auth-box {
+    width: 100%;
+
+    height: auto;
+
+    min-height: 0;
+
+    grid-template-columns: 1fr;
+
+    margin: 0;
+
+    border-radius: 16px;
+  }
+
+
+  .auth-visual {
+    display: none;
+  }
+
+
+  .auth-form-area {
+    padding: 25px 19px;
+
+    overflow: visible;
+  }
+
+
+  .auth-form-inner {
+    max-width: 520px;
+
+    max-height: none;
+  }
+
+
+  .auth-mobile-brand {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    margin-bottom: 18px;
+
+    color: #172b40;
+
+    font-size: 10px;
+
+    font-weight: 700;
+  }
+
+
+  .auth-mobile-brand i {
+    color: #d49a25;
+
+    font-size: 15px;
+  }
+
+
+  .auth-switch {
+    margin-top: 14px;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 450px) {
+
+  .auth-container {
+    padding: 12px 8px 16px;
+  }
+
+
+  .auth-brand {
+    margin-left: 3px;
+  }
+
+
+  .auth-brand-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+
+  .auth-brand-icon i {
+    font-size: 17px;
+  }
+
+
+  .auth-brand-text strong {
+    font-size: 11px;
+  }
+
+
+  .auth-brand-text small {
+    font-size: 6.5px;
+  }
+
+
+  .auth-form-area {
+    padding: 22px 14px;
+  }
+}

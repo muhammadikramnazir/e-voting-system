@@ -1,0 +1,91 @@
+.maintenance-page {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background:
+        radial-gradient(circle at top right,
+            rgba(37, 99, 235, 0.14),
+            transparent 35%),
+        radial-gradient(circle at bottom left,
+            rgba(14, 165, 233, 0.10),
+            transparent 35%),
+        #f7f9fc;
+    box-sizing: border-box;
+}
+
+.maintenance-card {
+    width: 100%;
+    max-width: 620px;
+    text-align: center;
+    padding: 55px 45px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    box-shadow: 0 25px 70px rgba(15, 23, 42, 0.10);
+}
+
+.maintenance-icon {
+    width: 82px;
+    height: 82px;
+    margin: 0 auto 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef4ff;
+    color: #2563eb;
+    font-size: 34px;
+}
+
+.maintenance-label {
+    display: inline-block;
+    margin-bottom: 14px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #64748b;
+}
+
+.maintenance-card h1 {
+    margin: 0 0 18px;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.15;
+    color: #0f172a;
+}
+
+.maintenance-card p {
+    margin: 0 auto;
+    max-width: 500px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #64748b;
+}
+
+.maintenance-card .maintenance-small {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+@media (max-width: 600px) {
+    .maintenance-page {
+        padding: 20px;
+    }
+
+    .maintenance-card {
+        padding: 40px 25px;
+        border-radius: 20px;
+    }
+
+    .maintenance-card h1 {
+        font-size: 32px;
+    }
+
+    .maintenance-card p {
+        font-size: 15px;
+    }
+}

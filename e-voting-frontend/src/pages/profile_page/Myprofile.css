@@ -1,0 +1,937 @@
+/* =========================================================
+   MY PROFILE - ELECTIONS PAGE DESIGN SYSTEM
+   ========================================================= */
+
+.mp-page {
+    position: relative;
+    min-height: 100%;
+    background: #f4f7fa;
+    color: #17324d;
+}
+
+/* Remove the washed-out header background effect */
+.mp-page-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+
+    background-image: url("/images/Lahore-High-Court.jpg");
+    background-size: cover;
+    background-position: center;
+
+    opacity: 0.12;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+.mp-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 32px 40px;
+}
+
+.mp-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 28px 0 24px;
+    margin-bottom: 4px;
+}
+
+.mp-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.mp-title-icon {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff4d9;
+    border: 1px solid #f4d994;
+    color: #d99b18;
+
+    font-size: 24px;
+}
+
+.dba-page-title {
+    margin: 0;
+    color: #17324d !important;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.dba-page-sub {
+    margin: 6px 0 0;
+    color: #72859a !important;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   EDIT PROFILE BUTTON
+   ========================================================= */
+
+.mp-edit-btn {
+    height: 48px;
+    padding: 0 22px;
+    border-radius: 11px;
+
+    background: #ffffff;
+    border: 1px solid #e2b33e !important;
+    color: #17324d !important;
+
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.mp-edit-btn:hover {
+    background: #ffc94f;
+    border-color: #ffc94f !important;
+    color: #17324d !important;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(218, 167, 45, 0.18);
+}
+
+
+/* =========================================================
+   MAIN GRID
+   ========================================================= */
+
+.mp-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(300px, 0.85fr);
+    gap: 24px;
+    align-items: start;
+}
+
+
+/* =========================================================
+   MAIN PROFILE CARD
+   ========================================================= */
+
+.mp-card {
+    background: #ffffff !important;
+    border: 1px solid #e3e9ef !important;
+    border-radius: 18px !important;
+    box-shadow: 0 4px 18px rgba(22, 48, 74, 0.04) !important;
+    overflow: hidden;
+}
+
+
+/* Profile top section */
+.mp-profile-header {
+    padding: 28px 32px;
+    background: #ffffff;
+    border-bottom: 1px solid #edf1f4;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.mp-avatar-wrap {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.mp-avatar {
+    width: 94px !important;
+    height: 94px !important;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    box-shadow: 0 5px 18px rgba(18, 43, 65, 0.15);
+}
+
+.mp-online {
+    position: absolute;
+    right: 2px;
+    bottom: 3px;
+
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: #23ae82;
+    border: 3px solid #ffffff;
+    color: #ffffff;
+    font-size: 11px;
+}
+
+.mp-name-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.mp-name-row h2 {
+    margin: 0;
+    color: #17324d !important;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.mp-verified {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+
+    padding: 5px 10px;
+    border-radius: 20px;
+
+    background: #eaf8f3 !important;
+    border: 1px solid #c9eadf;
+    color: #15946f !important;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.mp-role {
+    margin: 6px 0 10px;
+    color: #6e8297 !important;
+    font-size: 14px;
+}
+
+.mp-member-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.mp-member-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    color: #73879b;
+    font-size: 12px;
+}
+
+.mp-member-meta i {
+    color: #dba321;
+}
+
+
+/* =========================================================
+   PERSONAL INFORMATION
+   ========================================================= */
+
+.mp-info-heading {
+    padding: 25px 32px 16px;
+}
+
+.mp-info-heading h3 {
+    margin: 0;
+    color: #17324d !important;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.mp-info-heading p {
+    margin: 5px 0 0;
+    color: #8494a5 !important;
+    font-size: 13px;
+}
+
+.mp-secure {
+    padding: 6px 11px;
+    border-radius: 20px;
+    background: #f1f7ff !important;
+    color: #5180ad !important;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* Details */
+.mp-details {
+    padding: 0 32px 22px;
+}
+
+.mp-row {
+    min-height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    border-bottom: 1px solid #edf1f4;
+}
+
+.mp-row:last-child {
+    border-bottom: none;
+}
+
+.mp-field-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #627a91 !important;
+    font-size: 13px;
+}
+
+.mp-field-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+    background: #f5f8fb !important;
+    color: #6c89a4 !important;
+
+    font-size: 15px;
+}
+
+.mp-row strong {
+    color: #17324d !important;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: right;
+}
+
+
+/* =========================================================
+   RIGHT SIDE CARDS
+   ========================================================= */
+
+.mp-side {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.mp-status-card,
+.mp-overview-card,
+.mp-actions-card {
+    background: #ffffff !important;
+    border: 1px solid #e3e9ef !important;
+    border-radius: 17px !important;
+    box-shadow: 0 4px 18px rgba(22, 48, 74, 0.04) !important;
+}
+
+
+/* Side headings */
+.mp-status-card {
+    padding: 25px;
+}
+
+.mp-side-heading {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 20px;
+}
+
+.mp-side-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+}
+
+.mp-side-icon.gold {
+    background: #fff4d9 !important;
+    color: #d89b1b !important;
+}
+
+.mp-side-heading h3 {
+    margin: 0;
+    color: #17324d !important;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.mp-side-heading span {
+    display: block;
+    margin-top: 3px;
+    color: #8998a8 !important;
+    font-size: 11px;
+}
+
+
+/* Active status */
+.mp-status {
+    padding: 13px 15px !important;
+    border-radius: 11px !important;
+
+    background: #eefaf5 !important;
+    border: 1px solid #d1eee2 !important;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.mp-status-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #20ad7e;
+    box-shadow: 0 0 0 4px rgba(32, 173, 126, 0.10);
+}
+
+.mp-status strong {
+    color: #15946f !important;
+    font-size: 13px;
+}
+
+.mp-status-text {
+    margin: 14px 0 0;
+    color: #71859a !important;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   MEMBERSHIP OVERVIEW
+   ========================================================= */
+
+.mp-overview-card {
+    padding: 25px;
+}
+
+.mp-overview-card h3 {
+    margin: 0 0 7px;
+    color: #17324d !important;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.mp-overview-item {
+    min-height: 57px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    border-bottom: 1px solid #edf1f4;
+}
+
+.mp-overview-item:last-child {
+    border-bottom: none;
+}
+
+.mp-overview-item>span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #778a9e !important;
+    font-size: 12px;
+}
+
+.mp-overview-item>span i {
+    color: #dca426;
+}
+
+.mp-overview-item strong {
+    color: #17324d !important;
+    font-size: 12px;
+    text-align: right;
+}
+
+.mp-overview-item .verified-text {
+    color: #15946f !important;
+}
+
+
+/* =========================================================
+   QUICK ACTIONS
+   ========================================================= */
+
+.mp-actions-card {
+    padding: 25px;
+}
+
+.mp-actions-card h3 {
+    margin: 0 0 10px;
+    color: #17324d !important;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.mp-action {
+    width: 100%;
+    min-height: 58px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    border: none;
+    border-bottom: 1px solid #edf1f4;
+    background: transparent;
+
+    color: #506b84;
+    font-size: 12px;
+    text-align: left;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mp-action:last-child {
+    border-bottom: none;
+}
+
+.mp-action>span {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+    background: #f5f8fb;
+    color: #dba21f;
+}
+
+.mp-action>i {
+    margin-left: auto;
+    color: #a2b1bf;
+}
+
+.mp-action:hover {
+    padding-left: 5px;
+    color: #17324d;
+}
+
+
+/* =========================================================
+   PROFESSIONAL BANNER
+   Same visual style as Elections page
+   ========================================================= */
+
+.mp-banner {
+    position: relative;
+    min-height: 185px;
+    margin-top: 24px;
+
+    overflow: hidden;
+    border-radius: 17px;
+
+    background-image: url("/images/Lahore-High-Court.jpg");
+    background-size: cover;
+    background-position: center;
+
+    box-shadow: 0 4px 18px rgba(22, 48, 74, 0.05);
+}
+
+.mp-banner-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(90deg,
+            rgba(3, 27, 45, 0.94) 0%,
+            rgba(5, 34, 54, 0.88) 48%,
+            rgba(5, 34, 54, 0.64) 100%);
+}
+
+.mp-banner-content {
+    position: relative;
+    z-index: 2;
+
+    min-height: 185px;
+    padding: 30px 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    color: #ffffff;
+}
+
+.mp-banner-label {
+    display: inline-block;
+    margin-bottom: 9px;
+
+    color: #f4c34f !important;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+.mp-banner-content h2 {
+    margin: 0 0 10px;
+
+    color: #ffffff !important;
+    font-size: 29px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.mp-banner-content p {
+    margin: 0;
+    max-width: 650px;
+
+    color: rgba(255, 255, 255, 0.82) !important;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.mp-banner-icon {
+    width: 78px;
+    height: 78px;
+    min-width: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(244, 195, 79, 0.45);
+
+    color: #f4c34f !important;
+    font-size: 38px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+    .mp-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mp-side {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .mp-content {
+        padding: 0 16px 30px;
+    }
+
+    .mp-head {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .mp-edit-btn {
+        width: 100%;
+    }
+
+    .mp-profile-header {
+        padding: 22px;
+        align-items: flex-start;
+    }
+
+    .mp-details,
+    .mp-info-heading {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .mp-side {
+        display: flex;
+    }
+
+    .mp-banner-content {
+        padding: 28px 24px;
+    }
+
+    .mp-banner-icon {
+        display: none;
+    }
+
+    .mp-banner-content h2 {
+        font-size: 24px;
+    }
+
+    .mp-banner-content p {
+        font-size: 12px;
+    }
+}
+
+/* =========================================================
+   ACCOUNT VERIFICATION CARD - ISOLATED FINAL VERSION
+   ========================================================= */
+
+.mp-verification-card {
+    width: 100%;
+    margin-top: 18px;
+    padding: 22px;
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    background: #ffffff !important;
+    border: 1px solid #e3e9ef !important;
+    border-radius: 17px !important;
+    box-shadow: 0 4px 18px rgba(22, 48, 74, 0.04) !important;
+}
+
+.mp-verification-card * {
+    box-sizing: border-box;
+}
+
+.mp-verification-top {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.mp-verification-icon {
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+    background: #fff5d9;
+    color: #e6a000;
+}
+
+.mp-verification-icon i {
+    font-size: 27px;
+    line-height: 1;
+}
+
+.mp-verification-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 28px;
+    padding: 6px 10px;
+
+    border-radius: 20px;
+    background: #fff4d6;
+    color: #c58a00;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+.mp-verification-content {
+    width: 100%;
+    margin-top: 17px;
+}
+
+.mp-verification-content h3 {
+    margin: 0;
+    color: #17324d !important;
+    font-size: 22px;
+    line-height: 1.25;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+
+.mp-verification-content p {
+    margin: 9px 0 0;
+    color: #7890a5 !important;
+    font-size: 13px;
+    line-height: 1.65;
+    font-weight: 400;
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+
+.mp-verification-btn {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 52px !important;
+    margin-top: 18px !important;
+    padding: 0 15px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-direction: row !important;
+    gap: 12px !important;
+
+    position: static !important;
+    float: none !important;
+    transform: none !important;
+
+    border: 1px solid #e1e7ed !important;
+    border-radius: 13px !important;
+    background: #f8fafc !important;
+    color: #365875 !important;
+
+    cursor: pointer;
+    box-sizing: border-box;
+
+    text-align: left !important;
+    text-decoration: none !important;
+    writing-mode: horizontal-tb !important;
+}
+
+.mp-verification-btn:hover {
+    background: #fffaf0 !important;
+    border-color: #f0d58a !important;
+    color: #17324d !important;
+    padding-left: 15px !important;
+}
+
+.mp-verification-btn>span {
+    width: auto !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    flex: 1 1 auto !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex-direction: row !important;
+    gap: 9px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    color: #365875 !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    line-height: 1.2 !important;
+
+    white-space: nowrap !important;
+    text-align: left !important;
+    writing-mode: horizontal-tb !important;
+    transform: none !important;
+}
+
+.mp-verification-btn>span i {
+    flex-shrink: 0;
+    font-size: 15px;
+    color: #d99a00;
+}
+
+.mp-verification-btn>i {
+    flex-shrink: 0;
+    margin-left: auto !important;
+    color: #9aaebe !important;
+    font-size: 14px;
+}
+
+/* Prevent any generic button rules from changing this card. */
+.mp-verification-card button,
+.mp-verification-card button:hover,
+.mp-verification-card button:focus,
+.mp-verification-card button:active {
+    writing-mode: horizontal-tb !important;
+    text-orientation: mixed !important;
+    direction: ltr !important;
+    transform: none !important;
+}
+
+.mp-verification-card button::before,
+.mp-verification-card button::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* New-user neutral avatar */
+.mp-avatar-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef2f5;
+    color: #8a98a6;
+    overflow: hidden;
+}
+
+.mp-avatar-placeholder i {
+    font-size: 34px;
+}
+
+@media (max-width: 768px) {
+    .mp-verification-card {
+        margin-top: 16px;
+        padding: 18px;
+        border-radius: 18px !important;
+    }
+
+    .mp-verification-content h3 {
+        font-size: 20px;
+    }
+
+    .mp-verification-content p {
+        font-size: 12px;
+    }
+
+    .mp-verification-btn {
+        min-height: 50px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .mp-verification-card {
+        padding: 16px;
+    }
+
+    .mp-verification-top {
+        gap: 10px;
+    }
+
+    .mp-verification-icon {
+        width: 52px;
+        height: 52px;
+        min-width: 52px;
+    }
+
+    .mp-verification-icon i {
+        font-size: 24px;
+    }
+
+    .mp-verification-status {
+        font-size: 9px;
+        padding: 5px 8px;
+    }
+
+    .mp-verification-content h3 {
+        font-size: 19px;
+    }
+
+    .mp-verification-btn>span {
+        font-size: 12px !important;
+    }
+}

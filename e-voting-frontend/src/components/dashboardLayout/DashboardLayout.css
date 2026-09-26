@@ -1,0 +1,161 @@
+/* =====================================================
+   DASHBOARD MAIN LAYOUT
+===================================================== */
+
+.dba-layout {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+
+    overflow: hidden;
+
+    background: #f4f7fb;
+}
+
+
+/* =====================================================
+   MAIN AREA
+===================================================== */
+
+.dba-main {
+    flex: 1;
+
+    min-width: 0;
+    width: calc(100% - 218px);
+
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    margin-left: 218px;
+}
+
+
+/* =====================================================
+   CONTENT AREA
+   ONLY THIS AREA WILL SCROLL
+===================================================== */
+
+.dba-content {
+    flex: 1;
+
+    min-width: 0;
+    min-height: 0;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 23px 24px 30px;
+
+    margin-top: 82px;
+
+    color: #17253a;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scroll-behavior: auto;
+}
+
+
+/* =====================================================
+   CONTENT SCROLLBAR
+===================================================== */
+
+.dba-content::-webkit-scrollbar {
+    width: 7px;
+}
+
+.dba-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.dba-content::-webkit-scrollbar-thumb {
+    background: #cbd5df;
+    border-radius: 10px;
+}
+
+.dba-content::-webkit-scrollbar-thumb:hover {
+    background: #aebbc7;
+}
+
+
+/* Firefox */
+
+.dba-content {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5df transparent;
+}
+
+
+/* =====================================================
+   MOBILE SIDEBAR OVERLAY
+===================================================== */
+
+.dba-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1040;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 0;
+
+    border: 0;
+
+    background: rgba(3, 12, 22, 0.52);
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 991px) {
+
+    .dba-main {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .dba-content {
+        margin-top: 76px;
+        padding: 12px 18px 24px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .dba-content {
+        margin-top: 68px;
+        padding: 16px 14px 24px;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 450px) {
+
+    .dba-content {
+        margin-top: 68px;
+        padding: 14px 11px 20px;
+    }
+}

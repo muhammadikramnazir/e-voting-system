@@ -1,0 +1,414 @@
+/* =====================================================
+   REGISTER
+===================================================== */
+
+.register-card {
+    width: 100%;
+
+    max-width: 620px;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.register-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    margin-bottom: 16px;
+}
+
+
+.register-heading-icon {
+    width: 41px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    background: #fff4d9;
+
+    border: 1px solid #f1d08c;
+
+    color: #d49a25;
+}
+
+
+.register-heading-icon i {
+    font-size: 16px;
+}
+
+
+.register-heading h2 {
+    margin: 0;
+
+    color: #172b40;
+
+    font-size: 21px;
+
+    line-height: 1.15;
+
+    font-weight: 700;
+}
+
+
+.register-heading p {
+    margin: 4px 0 0;
+
+    color: #8995a2;
+
+    font-size: 9px;
+}
+
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.register-section-title {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+    padding-bottom: 6px;
+
+    border-bottom: 1px solid #e9edf1;
+
+    color: #405269;
+
+    font-size: 9.5px;
+
+    font-weight: 700;
+
+    letter-spacing: .5px;
+
+    text-transform: uppercase;
+}
+
+
+.register-section-title i {
+    color: #d49a25;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.reg-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px 10px;
+}
+
+
+/* =====================================================
+   FIELD
+===================================================== */
+
+.register-field label {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #526274;
+
+    font-size: 8.8px;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   INPUT
+===================================================== */
+
+.register-page .auth-input-icon {
+    position: relative;
+}
+
+
+.register-page .auth-input-icon>i:first-child {
+    position: absolute;
+
+    left: 11px;
+    top: 50%;
+
+    z-index: 2;
+
+    transform: translateY(-50%);
+
+    color: #8c99a7;
+
+    font-size: 10.5px;
+}
+
+
+.register-page .auth-input {
+    width: 100%;
+
+    height: 37px;
+
+    padding: 0 33px;
+
+    border: 1px solid #dce4eb;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    background: #f8fafc;
+
+    color: #20344a;
+
+    font-size: 9.5px;
+
+    transition:
+        border-color .2s ease,
+        background .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.register-page .auth-input::placeholder {
+    color: #a5b0bb;
+}
+
+
+.register-page .auth-input:focus {
+    background: #fff;
+
+    border-color: #dfac3e;
+
+    box-shadow:
+        0 0 0 3px rgba(246, 187, 69, .10);
+}
+
+
+/* =====================================================
+   EYE
+===================================================== */
+
+.register-page .auth-eye {
+    position: absolute;
+
+    right: 7px;
+    top: 50%;
+
+    width: 23px;
+    height: 23px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: translateY(-50%);
+
+    padding: 0;
+
+    border: 0;
+
+    border-radius: 5px;
+
+    background: transparent;
+
+    color: #84919f;
+
+    cursor: pointer;
+}
+
+
+.register-page .auth-eye:hover {
+    background: #fff4d9;
+
+    color: #b77d12;
+}
+
+
+/* =====================================================
+   TERMS
+===================================================== */
+
+.reg-terms {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    margin-top: 10px;
+
+    color: #7e8b98;
+
+    font-size: 8.5px;
+
+    cursor: pointer;
+}
+
+
+.reg-terms input {
+    width: 12px;
+    height: 12px;
+
+    margin: 0;
+
+    accent-color: #f6bb45;
+}
+
+
+.reg-terms b {
+    color: #d49a25;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.reg-submit {
+    width: 100%;
+
+    height: 41px;
+
+    margin-top: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    border: 1px solid rgba(214, 155, 38, .18);
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(135deg,
+            #ffd477,
+            #f6bb45);
+
+    color: #17263a;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 6px 15px rgba(246, 187, 69, .17);
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.reg-submit:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 9px 20px rgba(246, 187, 69, .24);
+}
+
+
+.reg-submit:disabled {
+    opacity: .68;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+
+.reg-submit i {
+    font-size: 12px;
+
+    transition: transform .2s ease;
+}
+
+
+.reg-submit:hover i {
+    transform: translateX(3px);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 760px) {
+
+    .register-card {
+        max-width: 600px;
+    }
+
+
+    .register-heading h2 {
+        font-size: 20px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .reg-grid {
+        grid-template-columns: 1fr;
+
+        gap: 9px;
+    }
+
+
+    .register-page .auth-input {
+        height: 40px;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 450px) {
+
+    .register-heading h2 {
+        font-size: 19px;
+    }
+
+
+    .register-heading p {
+        font-size: 8px;
+    }
+
+
+    .register-field label {
+        font-size: 8.5px;
+    }
+
+
+    .register-page .auth-input {
+        font-size: 9.5px;
+    }
+}

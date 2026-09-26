@@ -1,0 +1,213 @@
+/* =====================================================
+   ADMIN LAYOUT
+   FINAL VERSION
+
+   Sidebar = fixed
+   Topbar = fixed inside main layout
+   Content = ONLY scrolling area
+===================================================== */
+
+.admin-layout {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    overflow: hidden;
+
+    background: #f5f7fb;
+}
+
+
+/* =====================================================
+   MAIN AREA
+===================================================== */
+
+.admin-main {
+    position: relative;
+
+    width: calc(100% - 260px);
+    height: 100vh;
+    height: 100dvh;
+
+    min-width: 0;
+    min-height: 0;
+
+    margin-left: 260px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   CONTENT
+   ONLY THIS ELEMENT SCROLLS
+===================================================== */
+
+.admin-content {
+    position: relative;
+
+    width: 100%;
+
+    flex: 1 1 auto;
+
+    min-width: 0;
+    min-height: 0;
+
+    padding: 25px;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-gutter: stable;
+
+    background: #f5f7fb;
+}
+
+
+/* =====================================================
+   CONTENT INNER
+===================================================== */
+
+.admin-content-inner {
+    width: 100%;
+    max-width: 1700px;
+
+    min-width: 0;
+
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   CONTENT SCROLLBAR
+===================================================== */
+
+.admin-content::-webkit-scrollbar {
+    width: 7px;
+}
+
+.admin-content::-webkit-scrollbar-track {
+    background: #f5f7fb;
+}
+
+.admin-content::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+
+    border-radius: 10px;
+}
+
+.admin-content::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+
+/* =====================================================
+   LARGE DESKTOP
+===================================================== */
+
+@media (min-width: 1600px) {
+    .admin-main {
+        width: calc(100% - 260px);
+
+        margin-left: 260px;
+    }
+
+    .admin-content {
+        padding: 30px;
+    }
+
+    .admin-content-inner {
+        max-width: 1800px;
+    }
+}
+
+
+/* =====================================================
+   LAPTOP
+   1200px → 993px
+===================================================== */
+
+@media (max-width: 1200px) and (min-width: 993px) {
+    .admin-main {
+        width: calc(100% - 240px);
+
+        margin-left: 240px;
+    }
+
+    .admin-content {
+        padding: 22px;
+    }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 992px) {
+    .admin-main {
+        width: 100%;
+
+        height: 100vh;
+        height: 100dvh;
+
+        margin-left: 0;
+    }
+
+    .admin-content {
+        padding: 20px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+    .admin-layout {
+        width: 100%;
+        height: 100dvh;
+
+        overflow: hidden;
+    }
+
+    .admin-main {
+        width: 100%;
+        height: 100dvh;
+
+        margin-left: 0;
+
+        overflow: hidden;
+    }
+
+    .admin-content {
+        padding: 16px;
+
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+    .admin-content {
+        padding: 12px;
+    }
+}

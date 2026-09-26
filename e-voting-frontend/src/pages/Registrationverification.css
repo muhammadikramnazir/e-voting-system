@@ -1,0 +1,552 @@
+/* =====================================================
+   REGISTRATION OTP VERIFICATION
+   DISTRICT BAR ASSOCIATION
+===================================================== */
+
+.registration-verify-page .auth-form-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.registration-verify-page .rv-card {
+    width: 100%;
+    max-width: 390px;
+
+    padding: 30px 30px 27px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    border: 1px solid rgba(220, 228, 235, .9);
+    border-radius: 16px;
+
+    background:
+        linear-gradient(145deg,
+            rgba(255, 255, 255, .99),
+            rgba(248, 250, 252, .96));
+
+    box-shadow:
+        0 18px 45px rgba(24, 40, 58, .10);
+}
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.registration-verify-page .rv-icon {
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 17px;
+
+    border-radius: 15px;
+
+    border: 1px solid rgba(246, 187, 69, .55);
+
+    background:
+        linear-gradient(145deg,
+            rgba(255, 245, 218, .96),
+            rgba(246, 187, 69, .14));
+
+    color: #d49a25;
+
+    box-shadow:
+        0 8px 20px rgba(246, 187, 69, .12);
+}
+
+.registration-verify-page .rv-icon i {
+    font-size: 22px;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.registration-verify-page .rv-heading {
+    width: 100%;
+    margin-bottom: 22px;
+}
+
+.registration-verify-page .rv-heading>span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #d49a25;
+
+    font-size: 8.5px;
+    font-weight: 800;
+
+    letter-spacing: 1.45px;
+}
+
+.registration-verify-page .rv-heading h2 {
+    margin: 0;
+
+    color: #172b40;
+
+    font-size: 25px;
+    line-height: 1.15;
+    font-weight: 700;
+}
+
+.registration-verify-page .rv-heading p {
+    margin: 9px 0 0;
+
+    color: #7c8997;
+
+    font-size: 10px;
+
+    line-height: 1.65;
+}
+
+.registration-verify-page .rv-heading strong {
+    display: inline-block;
+
+    margin-top: 2px;
+
+    color: #304b66;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    word-break: break-word;
+}
+
+
+/* =====================================================
+   MESSAGE
+===================================================== */
+
+.registration-verify-page .rv-message {
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 8px;
+
+    box-sizing: border-box;
+
+    margin-bottom: 15px;
+
+    padding: 10px 12px;
+
+    border-radius: 8px;
+
+    text-align: left;
+
+    font-size: 9.5px;
+    line-height: 1.45;
+}
+
+.registration-verify-page .rv-error {
+    color: #b42318;
+
+    border: 1px solid #f5c2c0;
+
+    background: #fff5f4;
+}
+
+.registration-verify-page .rv-success {
+    color: #16794c;
+
+    border: 1px solid #b7e4cd;
+
+    background: #f0fbf5;
+}
+
+.registration-verify-page .rv-message i {
+    margin-top: 1px;
+
+    flex-shrink: 0;
+}
+
+
+/* =====================================================
+   OTP WRAPPER
+===================================================== */
+
+.registration-verify-page .rv-otp-wrapper {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    margin: 3px 0 21px;
+
+    padding: 3px 0;
+}
+
+
+/* =====================================================
+   OTP BOX
+===================================================== */
+
+.registration-verify-page .rv-otp-box {
+    width: 44px;
+    height: 50px;
+
+    flex: 0 0 44px;
+
+    box-sizing: border-box;
+
+    padding: 0;
+
+    border: 1.5px solid #cbd6df;
+    border-radius: 10px;
+
+    outline: none;
+
+    background:
+        linear-gradient(145deg,
+            rgba(255, 255, 255, .96),
+            rgba(246, 249, 252, .95));
+
+    color: #172b40;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    text-align: center;
+
+    caret-color: #d49a25;
+
+    box-shadow:
+        0 5px 14px rgba(28, 48, 68, .07),
+        inset 0 1px 0 rgba(255, 255, 255, .9);
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease,
+        background .2s ease,
+        transform .2s ease;
+}
+
+
+/* =====================================================
+   OTP HOVER
+===================================================== */
+
+.registration-verify-page .rv-otp-box:hover:not(:disabled) {
+    border-color: #b9c8d5;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 7px 17px rgba(28, 48, 68, .09);
+}
+
+
+/* =====================================================
+   OTP FOCUS
+===================================================== */
+
+.registration-verify-page .rv-otp-box:focus {
+    border-color: #e0ad3f;
+
+    background: #fff;
+
+    box-shadow:
+        0 0 0 3px rgba(246, 187, 69, .16),
+        0 8px 18px rgba(28, 48, 68, .08);
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   OTP FILLED
+===================================================== */
+
+.registration-verify-page .rv-otp-box.rv-otp-filled {
+    border-color: #d7a33a;
+
+    background:
+        linear-gradient(145deg,
+            #fffdf8,
+            #fff8e9);
+
+    color: #172b40;
+}
+
+
+/* =====================================================
+   OTP DISABLED
+===================================================== */
+
+.registration-verify-page .rv-otp-box:disabled {
+    opacity: .65;
+
+    cursor: not-allowed;
+}
+
+
+/* =====================================================
+   SUBMIT BUTTON
+===================================================== */
+
+.registration-verify-page .rv-submit {
+    width: 100%;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 0 18px;
+
+    border: 0;
+    border-radius: 9px;
+
+    background:
+        linear-gradient(135deg,
+            #ffd477,
+            #f6bb45);
+
+    color: #17263a;
+
+    font-family: inherit;
+
+    font-size: 11.5px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(246, 187, 69, .20);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        opacity .2s ease;
+}
+
+.registration-verify-page .rv-submit:hover:not(:disabled) {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(246, 187, 69, .28);
+}
+
+.registration-verify-page .rv-submit:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.registration-verify-page .rv-submit:disabled {
+    opacity: .65;
+
+    cursor: not-allowed;
+}
+
+.registration-verify-page .rv-submit i {
+    font-size: 12px;
+
+    transition: transform .2s ease;
+}
+
+.registration-verify-page .rv-submit:hover:not(:disabled) i {
+    transform: translateX(3px);
+}
+
+
+/* =====================================================
+   SPINNER
+===================================================== */
+
+.registration-verify-page .rv-spinner {
+    width: 13px;
+    height: 13px;
+
+    border: 2px solid rgba(23, 38, 58, .25);
+    border-top-color: #17263a;
+
+    border-radius: 50%;
+
+    animation: rv-spin .7s linear infinite;
+}
+
+@keyframes rv-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =====================================================
+   BACK TO LOGIN
+===================================================== */
+
+.registration-verify-page .rv-back {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 6px;
+
+    margin-top: 18px;
+
+    color: #42627f;
+
+    text-decoration: none;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    transition:
+        color .2s ease,
+        transform .2s ease;
+}
+
+.registration-verify-page .rv-back:hover {
+    color: #c18716;
+
+    transform: translateX(-2px);
+}
+
+.registration-verify-page .rv-back i {
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 950px) {
+
+    .registration-verify-page .rv-card {
+        max-width: 370px;
+
+        padding: 27px 25px 25px;
+    }
+
+    .registration-verify-page .rv-otp-wrapper {
+        gap: 7px;
+    }
+
+    .registration-verify-page .rv-otp-box {
+        width: 42px;
+        height: 48px;
+
+        flex-basis: 42px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 760px) {
+
+    .registration-verify-page .rv-card {
+        max-width: 520px;
+
+        padding: 27px 25px 25px;
+    }
+
+    .registration-verify-page .rv-otp-wrapper {
+        gap: 9px;
+    }
+
+    .registration-verify-page .rv-otp-box {
+        width: 48px;
+        height: 52px;
+
+        flex-basis: 48px;
+
+        font-size: 20px;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 450px) {
+
+    .registration-verify-page .rv-card {
+        padding: 24px 15px 22px;
+
+        border-radius: 13px;
+    }
+
+    .registration-verify-page .rv-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .registration-verify-page .rv-heading h2 {
+        font-size: 21px;
+    }
+
+    .registration-verify-page .rv-heading p {
+        font-size: 9.5px;
+    }
+
+    .registration-verify-page .rv-otp-wrapper {
+        gap: 5px;
+
+        margin-bottom: 18px;
+    }
+
+    .registration-verify-page .rv-otp-box {
+        width: 40px;
+        height: 46px;
+
+        flex-basis: 40px;
+
+        border-radius: 8px;
+
+        font-size: 18px;
+    }
+
+    .registration-verify-page .rv-submit {
+        height: 43px;
+    }
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 360px) {
+
+    .registration-verify-page .rv-otp-wrapper {
+        gap: 4px;
+    }
+
+    .registration-verify-page .rv-otp-box {
+        width: 37px;
+        height: 43px;
+
+        flex-basis: 37px;
+
+        font-size: 17px;
+    }
+}

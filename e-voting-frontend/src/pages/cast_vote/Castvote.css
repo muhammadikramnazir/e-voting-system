@@ -1,0 +1,1200 @@
+/* =====================================================
+   CAST VOTE PAGE
+===================================================== */
+
+.cv-page-intro {
+    margin-bottom: 10px;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.cv-hero {
+    position: relative;
+
+    min-height: 170px;
+
+    margin-bottom: 22px;
+
+    overflow: hidden;
+
+    border-radius: 13px;
+
+    background-size: cover;
+    background-position: center 45%;
+
+    box-shadow:
+        0 8px 25px rgba(9, 35, 55, 0.12);
+}
+
+.cv-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(90deg,
+            rgba(3, 28, 45, 0.97) 0%,
+            rgba(4, 34, 51, 0.91) 42%,
+            rgba(5, 39, 56, 0.68) 70%,
+            rgba(5, 39, 56, 0.38) 100%);
+}
+
+.cv-hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    min-height: 170px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 28px 34px;
+}
+
+.cv-hero-label {
+    display: inline-block;
+
+    margin-bottom: 6px;
+
+    color: #f5c451;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.cv-hero h1 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 31px;
+
+    line-height: 1.1;
+}
+
+.cv-hero h2 {
+    margin: 4px 0 7px;
+
+    color: #f6c553;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 19px;
+
+    font-weight: 600;
+}
+
+.cv-hero p {
+    margin: 0;
+
+    color: #d5e0e7;
+
+    font-size: 10px;
+}
+
+.cv-hero-quote {
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 28px;
+
+    border-left: 1px solid rgba(255, 255, 255, 0.25);
+
+    color: #ffffff;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 19px;
+
+    line-height: 1.25;
+
+    font-style: italic;
+}
+
+
+/* =====================================================
+   STEPS
+===================================================== */
+
+.cv-steps {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    margin: 4px 35px 22px;
+}
+
+.cv-step {
+    position: relative;
+
+    text-align: center;
+}
+
+.cv-step-line-wrap {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    height: 38px;
+}
+
+.cv-step-number {
+    position: relative;
+
+    z-index: 2;
+
+    width: 34px;
+    height: 34px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f5f8fa;
+
+    border: 1px solid #d6e0e7;
+
+    color: #758898;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+.cv-step.active .cv-step-number,
+.cv-step.completed .cv-step-number {
+    background: #fff1ce;
+
+    border-color: #efbc4b;
+
+    color: #b47708;
+}
+
+.cv-step.completed .cv-step-number {
+    background: #f5c451;
+
+    color: #172e41;
+}
+
+.cv-step-line {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 100%;
+
+    height: 1px;
+
+    background: #d9e1e7;
+
+    transform: translateY(-50%);
+}
+
+.cv-step-line.completed {
+    background: #e6ad31;
+}
+
+.cv-step small {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #8797a5;
+
+    font-size: 8px;
+}
+
+.cv-step.active small,
+.cv-step.completed small {
+    color: #c1840e;
+}
+
+
+/* =====================================================
+   ELECTION CARD
+===================================================== */
+
+.cv-election-card {
+    min-height: 96px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 16px 18px;
+
+    margin-bottom: 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #dfe7ed;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 6px 20px rgba(9, 35, 55, 0.05);
+}
+
+
+/* =====================================================
+   DATE
+===================================================== */
+
+.cv-election-date {
+    width: 63px;
+    min-width: 63px;
+
+    height: 70px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    overflow: hidden;
+
+    border: 1px solid #dfe7ed;
+
+    border-radius: 9px;
+
+    background: #f8fafc;
+}
+
+.cv-election-date span {
+    width: 100%;
+
+    padding: 5px 0;
+
+    text-align: center;
+
+    background: #fff0cc;
+
+    color: #d5910d;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+.cv-election-date strong {
+    color: #102b40;
+
+    font-size: 25px;
+
+    line-height: 27px;
+}
+
+.cv-election-date small {
+    color: #8495a4;
+
+    font-size: 8px;
+}
+
+
+/* =====================================================
+   ELECTION INFO
+===================================================== */
+
+.cv-election-info {
+    flex: 1;
+}
+
+.cv-election-info h2 {
+    margin: 0 0 4px;
+
+    color: #102b40;
+
+    font-size: 15px;
+
+    font-weight: 650;
+}
+
+.cv-election-info p {
+    margin: 0 0 8px;
+
+    color: #7c8d9c;
+
+    font-size: 9px;
+}
+
+.cv-election-meta {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.cv-election-meta span {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 5px;
+
+    color: #7c8d9c;
+
+    font-size: 8.5px;
+}
+
+.cv-election-meta i {
+    color: #8a9baa;
+
+    font-size: 9px;
+}
+
+
+/* =====================================================
+   VOTE MATTERS
+===================================================== */
+
+.cv-vote-matters {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    min-width: 230px;
+
+    padding: 12px 15px;
+
+    background: #fff8e8;
+
+    border: 1px solid #f1dfb8;
+
+    border-radius: 9px;
+}
+
+.cv-vote-icon {
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ffedc3;
+
+    color: #d7920d;
+
+    font-size: 16px;
+}
+
+.cv-vote-matters strong {
+    display: block;
+
+    color: #263c4d;
+
+    font-size: 10px;
+}
+
+.cv-vote-matters small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #8a97a3;
+
+    font-size: 8px;
+}
+
+
+/* =====================================================
+   CANDIDATE SECTION
+===================================================== */
+
+.cv-candidates-section {
+    margin-top: 3px;
+}
+
+.cv-section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 12px;
+}
+
+.cv-section-heading h2 {
+    margin: 0;
+
+    color: #102b40;
+
+    font-size: 17px;
+
+    font-weight: 650;
+}
+
+.cv-section-heading p {
+    margin: 4px 0 0;
+
+    color: #8393a1;
+
+    font-size: 9px;
+}
+
+.cv-selected-status {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 7px 10px;
+
+    border-radius: 20px;
+
+    color: #298e68;
+
+    background: #e9f8f1;
+
+    border: 1px solid #ccebdd;
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   CANDIDATE GRID
+===================================================== */
+
+.cv-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+
+/* =====================================================
+   CANDIDATE CARD
+===================================================== */
+
+.cv-card {
+    position: relative;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #dfe7ed;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 18px rgba(9, 35, 55, 0.05);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.cv-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #e6bd58;
+
+    box-shadow:
+        0 10px 25px rgba(9, 35, 55, 0.09);
+}
+
+.cv-card.selected {
+    border-color: #efb83f;
+
+    box-shadow:
+        0 8px 25px rgba(216, 148, 18, 0.14);
+}
+
+
+/* =====================================================
+   CANDIDATE PHOTO
+===================================================== */
+
+.cv-photo {
+    position: relative;
+
+    height: 210px;
+
+    overflow: hidden;
+
+    background: #edf2f5;
+}
+
+.cv-photo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center top;
+
+    image-rendering: auto;
+
+    transform: scale(1.001);
+
+    transition: transform 0.35s ease;
+}
+
+.cv-card:hover .cv-photo img {
+    transform: scale(1.025);
+}
+
+.cv-photo-overlay {
+    position: absolute;
+    inset: auto 0 0;
+
+    height: 50px;
+
+    background:
+        linear-gradient(transparent,
+            rgba(5, 25, 40, 0.20));
+}
+
+
+/* =====================================================
+   AWARD
+===================================================== */
+
+.cv-award {
+    position: absolute;
+
+    top: 12px;
+    left: 12px;
+
+    width: 29px;
+    height: 29px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fff2ce;
+
+    color: #d99a18;
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.08);
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   SELECTED ICON
+===================================================== */
+
+.cv-selected-icon {
+    position: absolute;
+
+    top: 12px;
+    right: 12px;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f6c34e;
+
+    color: #102c40;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.12);
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   CARD CONTENT
+===================================================== */
+
+.cv-card-content {
+    padding: 15px 13px 13px;
+
+    text-align: center;
+}
+
+.cv-card-content h3 {
+    margin: 0;
+
+    color: #102b40;
+
+    font-size: 14px;
+
+    font-weight: 650;
+}
+
+.cv-candidate-role {
+    margin: 4px 0 9px;
+
+    color: #8292a0;
+
+    font-size: 9px;
+}
+
+.cv-card-content blockquote {
+    min-height: 30px;
+
+    margin: 0 0 13px;
+
+    color: #83909c;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 9px;
+
+    font-style: italic;
+
+    line-height: 1.45;
+}
+
+
+/* =====================================================
+   SELECT BUTTON
+===================================================== */
+
+.cv-select-button {
+    width: 100%;
+
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5ad35;
+
+    border-radius: 7px;
+
+    color: #132e42;
+
+    font-size: 10px;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.cv-select-button:hover {
+    background: #fff8e8;
+}
+
+.cv-select-button.selected {
+    background: #f8c552;
+
+    border-color: #f8c552;
+
+    color: #132d40;
+
+    box-shadow:
+        0 4px 10px rgba(216, 148, 18, 0.12);
+}
+
+
+/* =====================================================
+   FOOTER BUTTONS
+===================================================== */
+
+.cv-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 18px;
+}
+
+.cv-previous,
+.cv-next {
+    min-width: 120px;
+
+    height: 42px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    border-radius: 8px;
+
+    font-size: 10px;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.cv-previous {
+    background: #ffffff;
+
+    border: 1px solid #e2aa35;
+
+    color: #163044;
+}
+
+.cv-previous:hover {
+    background: #fff8e8;
+
+    transform: translateY(-1px);
+}
+
+.cv-next {
+    min-width: 135px;
+
+    background: #f8c653;
+
+    border: 1px solid #f8c653;
+
+    color: #142e42;
+}
+
+.cv-next:hover {
+    background: #edb43b;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 13px rgba(216, 148, 18, 0.17);
+}
+
+
+/* =====================================================
+   BOTTOM BANNER
+===================================================== */
+
+.cv-bottom-banner {
+    position: relative;
+
+    min-height: 150px;
+
+    margin-top: 18px;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background-size: cover;
+
+    background-position: center 50%;
+
+    box-shadow:
+        0 8px 25px rgba(9, 35, 55, 0.12);
+}
+
+.cv-bottom-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(90deg,
+            rgba(3, 25, 41, 0.96) 0%,
+            rgba(4, 31, 47, 0.86) 45%,
+            rgba(4, 33, 49, 0.62) 100%);
+}
+
+.cv-bottom-content {
+    position: relative;
+
+    z-index: 2;
+
+    min-height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 25px 30px;
+}
+
+
+/* =====================================================
+   BOTTOM MESSAGE
+===================================================== */
+
+.cv-bottom-message {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 8px;
+}
+
+.cv-bottom-quote {
+    color: #f6c553;
+
+    font-family: Georgia, serif;
+
+    font-size: 45px;
+
+    line-height: 0.65;
+}
+
+.cv-bottom-message h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 21px;
+
+    line-height: 1.2;
+
+    font-style: italic;
+}
+
+.cv-bottom-message p {
+    margin: 8px 0 0;
+
+    color: #ccd7df;
+
+    font-size: 9px;
+}
+
+
+/* =====================================================
+   BOTTOM FEATURES
+===================================================== */
+
+.cv-bottom-features {
+    display: flex;
+    align-items: stretch;
+
+    gap: 0;
+}
+
+.cv-feature {
+    min-width: 135px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0 22px;
+
+    text-align: center;
+
+    border-left: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.cv-feature:first-child {
+    border-left: none;
+}
+
+.cv-feature i {
+    margin-bottom: 7px;
+
+    color: #f5c451;
+
+    font-size: 21px;
+}
+
+.cv-feature strong {
+    color: #ffffff;
+
+    font-size: 9px;
+
+    font-weight: 650;
+}
+
+.cv-feature span {
+    margin-top: 4px;
+
+    color: #bdcad3;
+
+    font-size: 8px;
+}
+
+
+/* =====================================================
+   LARGE TABLET
+===================================================== */
+
+@media (max-width: 1050px) {
+
+    .cv-vote-matters {
+        min-width: 190px;
+    }
+
+    .cv-photo {
+        height: 185px;
+    }
+
+    .cv-feature {
+        min-width: 115px;
+
+        padding: 0 13px;
+    }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 850px) {
+
+    .cv-hero-content {
+        padding: 25px;
+    }
+
+    .cv-hero-quote {
+        display: none;
+    }
+
+    .cv-election-card {
+        flex-wrap: wrap;
+    }
+
+    .cv-vote-matters {
+        width: 100%;
+    }
+
+    .cv-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cv-bottom-content {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .cv-bottom-features {
+        width: 100%;
+    }
+
+    .cv-feature {
+        flex: 1;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .cv-hero {
+        min-height: 200px;
+    }
+
+    .cv-hero-content {
+        min-height: 200px;
+
+        padding: 23px;
+    }
+
+    .cv-hero h1 {
+        font-size: 26px;
+    }
+
+    .cv-hero h2 {
+        font-size: 16px;
+    }
+
+    .cv-hero p {
+        font-size: 9px;
+    }
+
+    .cv-steps {
+        margin: 5px 5px 20px;
+    }
+
+    .cv-step-number {
+        width: 30px;
+        height: 30px;
+
+        font-size: 9px;
+    }
+
+    .cv-step small {
+        font-size: 7px;
+    }
+
+    .cv-election-card {
+        padding: 14px;
+    }
+
+    .cv-election-info {
+        min-width: calc(100% - 82px);
+    }
+
+    .cv-election-info h2 {
+        font-size: 14px;
+    }
+
+    .cv-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cv-photo {
+        height: 230px;
+    }
+
+    .cv-section-heading {
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+    .cv-selected-status {
+        display: none;
+    }
+
+    .cv-footer {
+        gap: 10px;
+    }
+
+    .cv-previous,
+    .cv-next {
+        flex: 1;
+    }
+
+    .cv-bottom-banner {
+        min-height: 260px;
+    }
+
+    .cv-bottom-content {
+        min-height: 260px;
+
+        padding: 22px;
+    }
+
+    .cv-bottom-features {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cv-feature {
+        min-width: 0;
+
+        padding: 0 7px;
+    }
+
+    .cv-feature strong {
+        font-size: 8px;
+    }
+
+    .cv-feature span {
+        font-size: 7px;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .cv-hero {
+        min-height: 190px;
+    }
+
+    .cv-hero-content {
+        min-height: 190px;
+
+        padding: 20px;
+    }
+
+    .cv-hero h1 {
+        font-size: 24px;
+    }
+
+    .cv-hero h2 {
+        font-size: 14px;
+    }
+
+    .cv-steps {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .cv-step-number {
+        width: 27px;
+        height: 27px;
+    }
+
+    .cv-step-line-wrap {
+        height: 32px;
+    }
+
+    .cv-step small {
+        font-size: 6.5px;
+    }
+
+    .cv-election-date {
+        width: 58px;
+        min-width: 58px;
+    }
+
+    .cv-election-meta {
+        gap: 8px;
+    }
+
+    .cv-photo {
+        height: 215px;
+    }
+
+    .cv-bottom-features {
+        gap: 0;
+    }
+
+    .cv-feature i {
+        font-size: 17px;
+    }
+
+    .cv-feature strong {
+        font-size: 7px;
+    }
+
+    .cv-feature span {
+        display: none;
+    }
+}

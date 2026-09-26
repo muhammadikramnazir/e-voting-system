@@ -1,0 +1,802 @@
+.db-welcome {
+    min-height: 106px;
+    padding: 21px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(110deg, #fff 0%, #fff 66%, #f7fafc 100%);
+    margin-bottom: 15px
+}
+
+.db-welcome p {
+    margin: 0;
+    color: #65758a;
+    font-size: 12px
+}
+
+.db-welcome h2 {
+    margin: 4px 0 0;
+    color: #d89b28;
+    font-size: 20px
+}
+
+.db-welcome-quote {
+    width: 170px;
+    min-height: 66px;
+    border-left: 1px solid #e7ecf1;
+    padding: 10px 0 10px 22px;
+    display: flex;
+    align-items: center;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.2;
+    color: #1c2d44
+}
+
+.db-stats {
+    margin-bottom: 19px
+}
+
+.db-stat {
+    min-height: 69px;
+    padding: 13px 15px;
+    display: flex;
+    align-items: center;
+    gap: 11px
+}
+
+.db-stat-icon {
+    width: 33px;
+    height: 33px;
+    border-radius: 7px;
+    display: grid;
+    place-items: center;
+    font-size: 14px
+}
+
+.db-stat-icon.gold {
+    color: #d99a24;
+    background: #fff1cf
+}
+
+.db-stat-icon.blue {
+    color: #3d82df;
+    background: #eaf3ff
+}
+
+.db-stat small {
+    display: block;
+    color: #8290a0;
+    font-size: 9px
+}
+
+.db-stat strong {
+    display: block;
+    margin-top: 2px;
+    color: #182941;
+    font-size: 19px
+}
+
+.db-section-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 2px 9px
+}
+
+.db-section-head h3 {
+    font-size: 15px;
+    margin: 0;
+    color: #17273e
+}
+
+.db-list {
+    overflow: hidden
+}
+
+.db-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 17px;
+    border-bottom: 1px solid #edf0f4
+}
+
+.db-row:last-child {
+    border-bottom: 0
+}
+
+.db-row-text {
+    flex: 1;
+    min-width: 0
+}
+
+.db-row-text h4 {
+    font-size: 11.5px;
+    margin: 0;
+    color: #1a2b43
+}
+
+.db-row-text p {
+    font-size: 9px;
+    color: #8793a1;
+    margin: 3px 0 6px
+}
+
+.db-row-text>div {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    color: #7b8797;
+    font-size: 8.5px
+}
+
+.db-row-text i {
+    color: #8996a6
+}
+
+.db-row-btn {
+    white-space: nowrap
+}
+
+.db-row .dba-date {
+    background: #f8fafc
+}
+
+@media(max-width:700px) {
+    .db-welcome-quote {
+        width: 130px;
+        font-size: 13px
+    }
+
+    .db-row {
+        align-items: flex-start;
+        flex-wrap: wrap
+    }
+
+    .db-row-btn {
+        margin-left: 56px;
+        width: calc(100% - 56px)
+    }
+
+    .db-row-text {
+        padding-top: 2px
+    }
+}
+
+@media(max-width:480px) {
+    .db-welcome {
+        padding: 18px
+    }
+
+    .db-welcome-quote {
+        display: none
+    }
+
+    .db-row {
+        gap: 10px
+    }
+
+    .db-row-text {
+        width: calc(100% - 52px)
+    }
+
+    .db-row-btn {
+        margin-left: 52px
+    }
+}
+
+
+
+/* =====================================================
+   DASHBOARD
+===================================================== */
+
+.db-welcome {
+    position: relative;
+    min-height: 170px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 32px;
+
+    border-radius: 14px;
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: center;
+
+    border: 1px solid #dfe6ed;
+
+    box-shadow: 0 8px 25px rgba(9, 35, 55, 0.07);
+
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   WELCOME IMAGE OVERLAY
+===================================================== */
+
+.db-welcome-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(90deg,
+            rgba(255, 255, 255, 0.97) 0%,
+            rgba(255, 255, 255, 0.91) 45%,
+            rgba(255, 255, 255, 0.72) 72%,
+            rgba(255, 255, 255, 0.42) 100%);
+
+    z-index: 1;
+}
+
+
+/* =====================================================
+   WELCOME CONTENT
+===================================================== */
+
+.db-welcome-content {
+    position: relative;
+    z-index: 2;
+}
+
+.welcome-small {
+    margin: 0 0 5px;
+
+    font-size: 15px;
+    font-weight: 400;
+
+    color: #60758a;
+}
+
+.db-welcome h2 {
+    margin: 0;
+
+    font-size: 28px;
+    line-height: 1.2;
+
+    font-weight: 600;
+
+    color: #d89412;
+}
+
+.welcome-subtitle {
+    display: block;
+
+    margin-top: 8px;
+
+    font-size: 12px;
+
+    color: #718396;
+}
+
+
+/* =====================================================
+   WELCOME QUOTE
+===================================================== */
+
+.db-welcome-quote {
+    position: relative;
+    z-index: 2;
+
+    min-width: 210px;
+
+    padding-left: 30px;
+
+    border-left: 1px solid rgba(17, 48, 72, 0.18);
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 22px;
+    line-height: 1.1;
+
+    font-style: italic;
+
+    color: #09263b;
+}
+
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.db-stats {
+    margin-bottom: 24px;
+}
+
+.db-stat {
+    height: 100%;
+
+    min-height: 92px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 18px 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #dfe6ed;
+
+    border-radius: 12px;
+
+    box-shadow: 0 6px 18px rgba(9, 35, 55, 0.05);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.db-stat:hover {
+    transform: translateY(-3px);
+
+    border-color: #f1c35e;
+
+    box-shadow: 0 10px 25px rgba(9, 35, 55, 0.09);
+}
+
+
+/* =====================================================
+   STAT ICON
+===================================================== */
+
+.db-stat-icon {
+    width: 46px;
+    height: 46px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    font-size: 20px;
+}
+
+
+/* Gold */
+
+.db-stat-icon.gold,
+.db-stat-icon.warning {
+    background: #fff0c9;
+    color: #d99718;
+}
+
+
+/* Blue */
+
+.db-stat-icon.blue,
+.db-stat-icon.primary {
+    background: #e8f1ff;
+    color: #3e80d8;
+}
+
+
+/* Green */
+
+.db-stat-icon.green,
+.db-stat-icon.success {
+    background: #e6f7ef;
+    color: #2d9b68;
+}
+
+
+/* =====================================================
+   STAT TEXT
+===================================================== */
+
+.db-stat-info {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.db-stat-info small {
+    font-size: 12px;
+
+    color: #7a8c9d;
+}
+
+.db-stat-info strong {
+    font-size: 24px;
+
+    line-height: 1;
+
+    color: #09263b;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   SECTION HEADING
+===================================================== */
+
+.db-section-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    margin: 26px 2px 12px;
+}
+
+.db-section-head h3 {
+    margin: 0;
+
+    font-size: 19px;
+
+    font-weight: 600;
+
+    color: #09263b;
+}
+
+.db-section-head p {
+    margin: 4px 0 0;
+
+    font-size: 12px;
+
+    color: #7b8d9e;
+}
+
+
+/* =====================================================
+   VIEW ALL
+===================================================== */
+
+.dba-link-gold {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    color: #d89412;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: all 0.2s ease;
+}
+
+.dba-link-gold:hover {
+    color: #ad7008;
+
+    gap: 10px;
+}
+
+
+/* =====================================================
+   ELECTION LIST
+===================================================== */
+
+.db-list {
+    background: #ffffff;
+
+    border: 1px solid #dfe6ed;
+
+    border-radius: 13px;
+
+    overflow: hidden;
+
+    box-shadow: 0 6px 20px rgba(9, 35, 55, 0.05);
+}
+
+
+/* =====================================================
+   ELECTION ROW
+===================================================== */
+
+.db-row {
+    min-height: 100px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 18px 20px;
+
+    position: relative;
+
+    transition: background 0.2s ease;
+}
+
+.db-row+.db-row {
+    border-top: 1px solid #e7edf2;
+}
+
+.db-row:hover {
+    background: #fcfdfe;
+}
+
+
+/* =====================================================
+   DATE BOX
+===================================================== */
+
+.dba-date {
+    width: 56px;
+    min-width: 56px;
+
+    height: 62px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: #f8fafc;
+
+    border: 1px solid #dfe6ed;
+
+    border-radius: 9px;
+
+    overflow: hidden;
+
+    text-align: center;
+}
+
+.dba-date .m {
+    width: 100%;
+
+    padding: 3px 0;
+
+    background: #fff0ce;
+
+    color: #d99412;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+.dba-date .d {
+    font-size: 20px;
+
+    line-height: 21px;
+
+    font-weight: 700;
+
+    color: #09263b;
+}
+
+.dba-date .y {
+    font-size: 9px;
+
+    color: #7b8d9d;
+}
+
+
+/* =====================================================
+   ELECTION TEXT
+===================================================== */
+
+.db-row-text {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.db-row-text h4 {
+    margin: 0 0 4px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: #09263b;
+}
+
+.db-row-text p {
+    margin: 0 0 7px;
+
+    font-size: 11px;
+
+    color: #718496;
+}
+
+
+/* =====================================================
+   ELECTION META
+===================================================== */
+
+.db-election-meta {
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+}
+
+.db-election-meta span {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 5px;
+
+    font-size: 10px;
+
+    color: #738697;
+}
+
+.db-election-meta i {
+    font-size: 10px;
+
+    color: #8b9bab;
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.dba-btn-gold {
+    border: none;
+
+    background: #f9c653;
+
+    color: #172b3a;
+
+    font-weight: 600;
+
+    border-radius: 8px;
+
+    padding: 11px 18px;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.dba-btn-gold:hover {
+    background: #efb63b;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 12px rgba(216, 148, 18, 0.2);
+}
+
+.db-row-btn {
+    min-width: 138px;
+}
+
+.db-row-btn i {
+    margin-left: 6px;
+}
+
+
+/* =====================================================
+   RESPONSIVE - TABLET
+===================================================== */
+
+@media (max-width: 992px) {
+    .db-welcome {
+        min-height: 155px;
+
+        padding: 25px;
+    }
+
+    .db-welcome h2 {
+        font-size: 25px;
+    }
+
+    .db-welcome-quote {
+        min-width: 160px;
+
+        font-size: 19px;
+    }
+
+    .db-row {
+        gap: 14px;
+
+        padding: 16px;
+    }
+
+    .db-row-btn {
+        min-width: 125px;
+
+        padding: 10px 12px;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE - MOBILE
+===================================================== */
+
+@media (max-width: 576px) {
+    .db-welcome {
+        min-height: 180px;
+
+        padding: 22px;
+
+        align-items: flex-start;
+    }
+
+    .db-welcome-overlay {
+        background:
+            linear-gradient(90deg,
+                rgba(255, 255, 255, 0.97),
+                rgba(255, 255, 255, 0.82));
+    }
+
+    .db-welcome h2 {
+        font-size: 23px;
+    }
+
+    .db-welcome-quote {
+        display: none;
+    }
+
+    .db-stat {
+        min-height: 82px;
+
+        padding: 15px;
+    }
+
+    .db-stat-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .db-stat-info strong {
+        font-size: 21px;
+    }
+
+    .db-section-head {
+        align-items: center;
+    }
+
+    .db-section-head h3 {
+        font-size: 17px;
+    }
+
+    .db-section-head p {
+        display: none;
+    }
+
+    .db-row {
+        align-items: flex-start;
+
+        flex-wrap: wrap;
+
+        padding: 15px;
+    }
+
+    .db-row-text {
+        width: calc(100% - 75px);
+    }
+
+    .db-row-btn {
+        width: 100%;
+
+        margin-top: 4px;
+    }
+
+    .db-election-meta {
+        flex-wrap: wrap;
+
+        gap: 8px;
+    }
+}

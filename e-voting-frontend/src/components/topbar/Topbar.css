@@ -1,0 +1,2091 @@
+/* =====================================================
+   DISTRICT BAR ASSOCIATION
+   PREMIUM TOPBAR
+===================================================== */
+
+.dba-topbar {
+    position: fixed;
+
+    top: 0;
+    left: 218px;
+    right: 0;
+
+    width: auto;
+    height: 82px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 28px;
+
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    border-bottom: 1px solid #e3e8ee;
+
+    z-index: 1000;
+
+    box-shadow:
+        0 4px 20px rgba(7, 23, 37, 0.045);
+
+    backdrop-filter: blur(14px);
+}
+
+
+/* =====================================================
+   MOBILE MENU BUTTON
+===================================================== */
+
+.tb-menu {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: 1px solid #dfe6ed;
+    border-radius: 11px;
+
+    background: #f8fafc;
+
+    color: #173047;
+
+    font-size: 19px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.tb-menu:hover {
+    background: #f7c55e;
+
+    border-color: #f7c55e;
+
+    color: #17243a;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 6px 14px rgba(246, 187, 69, 0.18);
+}
+
+
+/* =====================================================
+   SEARCH AREA
+===================================================== */
+
+.tb-search {
+    position: relative;
+
+    width: 410px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 7px 0 8px;
+
+    box-sizing: border-box;
+
+    background: #f7f9fb;
+
+    border: 1px solid #e1e7ed;
+
+    border-radius: 12px;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* Search hover */
+
+.tb-search:hover {
+    background: #ffffff;
+
+    border-color: #d5dee7;
+}
+
+
+/* Search focus */
+
+.tb-search:focus-within {
+    background: #ffffff;
+
+    border-color: rgba(246, 187, 69, 0.85);
+
+    box-shadow:
+        0 0 0 4px rgba(246, 187, 69, 0.09),
+        0 5px 18px rgba(7, 23, 37, 0.045);
+
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   SEARCH ICON
+===================================================== */
+
+.tb-search>i {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    margin-right: 9px;
+
+    border-radius: 9px;
+
+    background: #edf2f6;
+
+    color: #647689;
+
+    font-size: 12px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* Search icon hover */
+
+.tb-search:hover>i {
+    background: #fff3d0;
+
+    color: #9b6a08;
+}
+
+
+/* Search icon focus */
+
+.tb-search:focus-within>i {
+    background: #f7c55e;
+
+    color: #17243a;
+
+    transform: scale(1.04);
+}
+
+
+/* =====================================================
+   SEARCH INPUT
+===================================================== */
+
+.tb-search input {
+    flex: 1;
+
+    width: 100%;
+    min-width: 0;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+
+    color: #24364a;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    font-weight: 500;
+}
+
+
+.tb-search input::placeholder {
+    color: #9aa7b4;
+
+    transition: color 0.2s ease;
+}
+
+
+.tb-search:focus-within input::placeholder {
+    color: #aeb8c2;
+}
+
+
+/* =====================================================
+   RIGHT SECTION
+===================================================== */
+
+.tb-right {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-left: auto;
+}
+
+
+/* =====================================================
+   NOTIFICATION BUTTON
+===================================================== */
+
+.tb-bell {
+    position: relative;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: 1px solid #e1e7ed;
+
+    border-radius: 11px;
+
+    background: #f8fafc;
+
+    color: #627486;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.tb-bell:hover {
+    background: #fff8e5;
+
+    border-color: #f3c25c;
+
+    color: #80600f;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 16px rgba(246, 187, 69, 0.16);
+}
+
+
+.tb-bell>i {
+    font-size: 13px;
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+.tb-bell:hover>i {
+    transform: rotate(-8deg);
+}
+
+
+/* =====================================================
+   NOTIFICATION BADGE
+===================================================== */
+
+.tb-bell em {
+    position: absolute;
+
+    top: -5px;
+    right: -5px;
+
+    min-width: 18px;
+    height: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 4px;
+
+    box-sizing: border-box;
+
+    border: 2px solid #ffffff;
+
+    border-radius: 20px;
+
+    background: #e84949;
+
+    color: #ffffff;
+
+    font-size: 7px;
+
+    font-style: normal;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 3px 8px rgba(232, 73, 73, 0.25);
+}
+
+
+/* =====================================================
+   USER PROFILE
+===================================================== */
+
+.tb-user {
+    position: relative;
+
+    min-width: 205px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 5px 9px 5px 6px;
+
+    box-sizing: border-box;
+
+    border: 1px solid transparent;
+
+    border-radius: 13px;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* Profile hover */
+
+.tb-user:hover {
+    background: #f8fafc;
+
+    border-color: #e1e7ed;
+
+    box-shadow:
+        0 7px 18px rgba(7, 23, 37, 0.055);
+
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   PROFILE IMAGE
+===================================================== */
+
+.tb-user img {
+    width: 44px;
+    height: 44px;
+
+    flex-shrink: 0;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    padding: 2px;
+
+    box-sizing: border-box;
+
+    background: #f7c55e;
+
+    border: 1px solid #f7c55e;
+
+    box-shadow:
+        0 3px 10px rgba(7, 23, 37, 0.13);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.tb-user:hover img {
+    transform: scale(1.04);
+
+    box-shadow:
+        0 4px 13px rgba(246, 187, 69, 0.22);
+}
+
+
+/* =====================================================
+   USER INFORMATION
+===================================================== */
+
+.tb-user-info {
+    flex: 1;
+
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    line-height: 1.2;
+}
+
+
+.tb-user-info strong {
+    display: block;
+
+    max-width: 130px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    color: #172b3f;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.tb-user-info small {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #8a98a6;
+
+    font-size: 8.5px;
+
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   ONLINE STATUS DOT
+===================================================== */
+
+.tb-user-info small::before {
+    content: "";
+
+    display: inline-block;
+
+    width: 5px;
+    height: 5px;
+
+    margin-right: 5px;
+
+    vertical-align: middle;
+
+    border-radius: 50%;
+
+    background: #4caf7d;
+
+    box-shadow:
+        0 0 0 3px rgba(76, 175, 125, 0.10);
+}
+
+
+/* =====================================================
+   DROPDOWN ARROW
+===================================================== */
+
+.tb-user-arrow {
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 8px;
+
+    background: #f0f3f6;
+
+    color: #748392;
+
+    font-size: 8px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.tb-user:hover .tb-user-arrow {
+    background: #f7c55e;
+
+    color: #17243a;
+
+    transform: translateY(1px);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .dba-topbar {
+        padding: 0 22px;
+    }
+
+    .tb-search {
+        width: 340px;
+    }
+
+    .tb-user {
+        min-width: 185px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE / TABLET
+===================================================== */
+
+@media (max-width: 991px) {
+
+    .dba-topbar {
+        left: 0;
+
+        width: 100%;
+
+        height: 76px;
+
+        padding: 0 20px;
+
+        gap: 12px;
+    }
+
+
+    .tb-menu {
+        display: flex;
+    }
+
+
+    .tb-search {
+        width: min(390px, 48vw);
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .dba-topbar {
+        height: 68px;
+
+        padding: 0 15px;
+
+        gap: 10px;
+    }
+
+
+    /* Search */
+
+    .tb-search {
+        flex: 1;
+
+        width: auto;
+
+        height: 40px;
+
+        padding: 0 7px;
+    }
+
+
+    .tb-search>i {
+        width: 28px;
+        height: 28px;
+
+        margin-right: 6px;
+    }
+
+
+    /* Right */
+
+    .tb-right {
+        gap: 7px;
+    }
+
+
+    /* Bell */
+
+    .tb-bell {
+        width: 38px;
+        height: 38px;
+    }
+
+
+    /* User */
+
+    .tb-user {
+        min-width: auto;
+
+        width: 42px;
+        height: 42px;
+
+        padding: 0;
+
+        border: 0;
+    }
+
+
+    .tb-user:hover {
+        background: transparent;
+
+        border-color: transparent;
+
+        box-shadow: none;
+
+        transform: none;
+    }
+
+
+    .tb-user img {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    .tb-user-info,
+    .tb-user-arrow {
+        display: none;
+    }
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 450px) {
+
+    .dba-topbar {
+        padding: 0 11px;
+
+        gap: 7px;
+    }
+
+
+    .tb-menu {
+        width: 37px;
+        height: 37px;
+
+        border-radius: 9px;
+
+        font-size: 17px;
+    }
+
+
+    .tb-search {
+        height: 38px;
+
+        border-radius: 10px;
+    }
+
+
+    .tb-search>i {
+        width: 27px;
+        height: 27px;
+
+        border-radius: 7px;
+    }
+
+
+    .tb-search input {
+        font-size: 10px;
+    }
+
+
+    .tb-bell {
+        width: 36px;
+        height: 36px;
+
+        border-radius: 9px;
+    }
+
+
+    .tb-user,
+    .tb-user img {
+        width: 37px;
+        height: 37px;
+    }
+}
+
+/* ======================================================
+   TOPBAR PROFILE PLACEHOLDER
+====================================================== */
+
+.tb-user-placeholder {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #eef2f5;
+    color: #8a98a6;
+
+    overflow: hidden;
+}
+
+.tb-user-placeholder i {
+    font-size: 20px;
+}
+
+/* =====================================================
+   SEARCH WRAPPER
+===================================================== */
+
+.tb-search-wrapper {
+    position: relative;
+
+    width: 410px;
+
+    flex-shrink: 0;
+}
+
+
+/* =====================================================
+   SEARCH CLEAR BUTTON
+===================================================== */
+
+.tb-search-clear {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: 0;
+    border-radius: 7px;
+
+    background: transparent;
+
+    color: #8a98a6;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.tb-search-clear:hover {
+    background: #eef2f5;
+
+    color: #24364a;
+}
+
+
+/* =====================================================
+   SEARCH RESULTS
+===================================================== */
+
+.tb-search-results {
+    position: absolute;
+
+    top: calc(100% + 9px);
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e7ed;
+
+    border-radius: 13px;
+
+    box-shadow:
+        0 16px 40px rgba(7, 23, 37, 0.13);
+
+    overflow: hidden;
+
+    z-index: 2000;
+
+    animation:
+        tbSearchDropIn 0.16s ease;
+}
+
+
+@keyframes tbSearchDropIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   SEARCH HEADER
+===================================================== */
+
+.tb-search-results-header {
+    height: 39px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 13px;
+
+    box-sizing: border-box;
+
+    border-bottom: 1px solid #edf1f4;
+
+    background: #fafbfc;
+}
+
+
+.tb-search-results-header span {
+    color: #637384;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+}
+
+
+.tb-search-results-header small {
+    min-width: 20px;
+    height: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 5px;
+
+    box-sizing: border-box;
+
+    border-radius: 6px;
+
+    background: #fff3d0;
+
+    color: #80600f;
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   SEARCH RESULT ITEM
+===================================================== */
+
+.tb-search-result {
+    width: 100%;
+
+    min-height: 59px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 9px 12px;
+
+    box-sizing: border-box;
+
+    border: 0;
+    border-bottom: 1px solid #f1f3f5;
+
+    background: #ffffff;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background 0.18s ease;
+}
+
+
+.tb-search-result:last-child {
+    border-bottom: 0;
+}
+
+
+.tb-search-result:hover {
+    background: #f8fafc;
+}
+
+
+/* =====================================================
+   RESULT ICON
+===================================================== */
+
+.tb-search-result-icon {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 9px;
+
+    background: #fff3d0;
+
+    color: #9b6a08;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   RESULT CONTENT
+===================================================== */
+
+.tb-search-result-content {
+    flex: 1;
+
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.tb-search-result-content strong {
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    color: #24364a;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+.tb-search-result-content small {
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    color: #8a98a6;
+
+    font-size: 8.5px;
+
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   RESULT ARROW
+===================================================== */
+
+.tb-search-result-arrow {
+    color: #a1adb8;
+
+    font-size: 9px;
+
+    transition:
+        color 0.18s ease,
+        transform 0.18s ease;
+}
+
+
+.tb-search-result:hover .tb-search-result-arrow {
+    color: #9b6a08;
+
+    transform: translateX(2px);
+}
+
+
+/* =====================================================
+   EMPTY SEARCH
+===================================================== */
+
+.tb-search-empty {
+    min-height: 145px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 22px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+}
+
+
+.tb-search-empty-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 8px;
+
+    border-radius: 50%;
+
+    background: #f1f4f6;
+
+    color: #9aa7b4;
+
+    font-size: 13px;
+}
+
+
+.tb-search-empty strong {
+    color: #44576a;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+.tb-search-empty small {
+    max-width: 220px;
+
+    margin-top: 4px;
+
+    color: #9aa7b4;
+
+    font-size: 8.5px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .tb-search-wrapper {
+        width: 340px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 991px) {
+
+    .tb-search-wrapper {
+        width: min(390px, 48vw);
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .tb-search-wrapper {
+        flex: 1;
+
+        width: auto;
+
+        min-width: 0;
+    }
+
+
+    .tb-search-results {
+        top: calc(100% + 8px);
+
+        width: min(360px, calc(100vw - 30px));
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 450px) {
+
+    .tb-search-results {
+        position: fixed;
+
+        top: 60px;
+        left: 11px;
+        right: 11px;
+
+        width: auto;
+    }
+
+}
+
+/* =====================================================
+   MEMBER NOTIFICATION WRAPPER
+===================================================== */
+
+.tb-notification-wrapper {
+    position: relative;
+
+    z-index: 3000;
+}
+
+
+/* =====================================================
+   NOTIFICATION DROPDOWN
+===================================================== */
+
+.tb-notification-dropdown {
+    position: absolute;
+
+    top: calc(100% + 12px);
+    right: 0;
+
+    width: 360px;
+    max-width: calc(100vw - 25px);
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8ee;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 18px 45px rgba(24, 43, 61, 0.16);
+
+    overflow: hidden;
+
+    z-index: 99999;
+
+    animation:
+        memberNotificationDropIn 0.18s ease;
+}
+
+
+@keyframes memberNotificationDropIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.tb-notification-header {
+    min-height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 11px 15px;
+
+    box-sizing: border-box;
+
+    border-bottom: 1px solid #edf1f4;
+
+    background: #ffffff;
+}
+
+
+.tb-notification-header>div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.tb-notification-header strong {
+    color: #24364a;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.tb-notification-header span {
+    color: #98a5b0;
+
+    font-size: 9px;
+}
+
+
+.tb-notification-header button {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+
+    border-radius: 8px;
+
+    background: #f5f7f9;
+
+    color: #738291;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.tb-notification-header button:hover {
+    background: #fff5d9;
+
+    color: #9b6a08;
+
+    transform: rotate(20deg);
+}
+
+
+/* =====================================================
+   LIST
+===================================================== */
+
+.tb-notification-list {
+    max-height: 350px;
+
+    overflow-y: auto;
+}
+
+
+.tb-notification-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+.tb-notification-list::-webkit-scrollbar-thumb {
+    background: #d9e0e6;
+
+    border-radius: 10px;
+}
+
+
+/* =====================================================
+   ITEM
+===================================================== */
+
+.tb-notification-item {
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 11px;
+
+    padding: 13px 15px;
+
+    box-sizing: border-box;
+
+    border: 0;
+    border-bottom: 1px solid #f0f3f5;
+
+    background: #ffffff;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background 0.18s ease;
+}
+
+
+.tb-notification-item:hover {
+    background: #fafbfc;
+}
+
+
+.tb-notification-item:last-child {
+    border-bottom: 0;
+}
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.tb-notification-icon {
+    width: 37px;
+    height: 37px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    font-size: 13px;
+}
+
+
+.tb-notification-icon.blue {
+    background: #eef5ff;
+
+    color: #3976c9;
+}
+
+
+.tb-notification-icon.orange {
+    background: #fff4df;
+
+    color: #bd7b0a;
+}
+
+
+.tb-notification-icon.green {
+    background: #eaf8f0;
+
+    color: #27925d;
+}
+
+
+.tb-notification-icon.purple {
+    background: #f2edff;
+
+    color: #7650c9;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.tb-notification-content {
+    min-width: 0;
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.tb-notification-content strong {
+    color: #2b3d50;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+.tb-notification-content small {
+    color: #82909d;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+}
+
+
+.tb-notification-content em {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+
+    margin-top: 1px;
+
+    color: #9b6a08;
+
+    font-size: 8px;
+
+    font-style: normal;
+
+    font-weight: 700;
+}
+
+
+.tb-notification-content em i {
+    font-size: 7px;
+}
+
+
+/* =====================================================
+   EMPTY STATE
+===================================================== */
+
+.tb-notification-empty {
+    min-height: 180px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 22px;
+
+    text-align: center;
+}
+
+
+.tb-notification-empty-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 9px;
+
+    border-radius: 50%;
+
+    background: #f1f4f6;
+
+    color: #99a6b2;
+
+    font-size: 17px;
+}
+
+
+.tb-notification-empty strong {
+    color: #526373;
+
+    font-size: 10px;
+}
+
+
+.tb-notification-empty span {
+    margin-top: 4px;
+
+    color: #a0abb4;
+
+    font-size: 8.5px;
+}
+
+
+.tb-notification-spinner {
+    margin-bottom: 10px;
+
+    color: #9b6a08;
+
+    font-size: 21px;
+
+    animation:
+        memberNotificationSpin 0.8s linear infinite;
+}
+
+
+@keyframes memberNotificationSpin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.tb-notification-footer {
+    padding: 9px 12px;
+
+    border-top: 1px solid #edf1f4;
+
+    background: #fafbfc;
+}
+
+
+.tb-notification-footer button {
+    width: 100%;
+
+    height: 33px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    border: 0;
+
+    border-radius: 8px;
+
+    background: #fff5d9;
+
+    color: #8e650c;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.tb-notification-footer button:hover {
+    background: #ffedb5;
+}
+
+
+/* =====================================================
+   TOPBAR OVERFLOW FIX
+===================================================== */
+
+.dba-topbar {
+    position: relative;
+
+    z-index: 1000;
+
+    overflow: visible !important;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .tb-notification-dropdown {
+        position: fixed;
+
+        top: 64px;
+        right: 10px;
+        left: 10px;
+
+        width: auto;
+        max-width: none;
+    }
+
+}
+
+/* =====================================================
+   TOPBAR PROFILE - DESKTOP FIX
+===================================================== */
+
+@media (min-width: 992px) {
+    .dba-topbar .tb-user {
+        width: auto !important;
+        min-width: 205px !important;
+        height: 58px !important;
+        padding: 5px 9px 5px 6px !important;
+    }
+
+    .dba-topbar .tb-user-info {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        flex: 1 !important;
+        min-width: 0 !important;
+    }
+
+    .dba-topbar .tb-user-arrow {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-shrink: 0 !important;
+    }
+
+    .dba-topbar .tb-user-info strong {
+        display: block !important;
+    }
+
+    .dba-topbar .tb-user-info small {
+        display: block !important;
+    }
+}
+
+/* =====================================================
+   FINAL DESKTOP TOPBAR FIX
+===================================================== */
+
+/* Desktop / Laptop */
+@media (min-width: 701px) {
+
+    .dba-topbar .tb-user {
+        display: flex !important;
+        width: auto !important;
+        min-width: 205px !important;
+        height: 58px !important;
+        padding: 5px 9px 5px 6px !important;
+        gap: 10px !important;
+        overflow: visible !important;
+    }
+
+    .dba-topbar .tb-user img {
+        display: block !important;
+        width: 44px !important;
+        height: 44px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .dba-topbar .tb-user-info {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        flex: 1 !important;
+        min-width: 0 !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .dba-topbar .tb-user-info strong {
+        display: block !important;
+        max-width: 130px !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+    }
+
+    .dba-topbar .tb-user-info small {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .dba-topbar .tb-user-arrow {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    /* Notification */
+    .dba-topbar .tb-bell {
+        display: flex !important;
+        position: relative !important;
+        overflow: visible !important;
+    }
+
+    .dba-topbar .tb-bell em {
+        display: flex !important;
+        position: absolute !important;
+        top: -5px !important;
+        right: -5px !important;
+        z-index: 20 !important;
+
+        min-width: 18px !important;
+        height: 18px !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        padding: 0 4px !important;
+
+        border: 2px solid #fff !important;
+        border-radius: 20px !important;
+
+        background: #e84949 !important;
+        color: #fff !important;
+
+        font-size: 7px !important;
+        font-style: normal !important;
+        font-weight: 700 !important;
+    }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (min-width: 701px) and (max-width: 1050px) {
+
+    .dba-topbar {
+        padding: 0 20px !important;
+    }
+
+    .tb-search {
+        width: min(360px, 42vw) !important;
+    }
+
+    .tb-user {
+        min-width: 185px !important;
+    }
+
+    .tb-user-info strong {
+        max-width: 105px !important;
+    }
+}
+
+
+/* =====================================================
+   MOBILE ONLY
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .dba-topbar .tb-user {
+        width: 42px !important;
+        min-width: 42px !important;
+        height: 42px !important;
+        padding: 0 !important;
+    }
+
+    .dba-topbar .tb-user-info,
+    .dba-topbar .tb-user-arrow {
+        display: none !important;
+    }
+}
+
+/* =========================================================
+   FINAL TOPBAR ALIGNMENT FIX
+   IMPORTANT:
+   Topbar remains FIXED and does NOT scroll with page.
+========================================================= */
+
+.dba-topbar {
+    position: fixed !important;
+
+    top: 0 !important;
+    left: 218px !important;
+    right: 0 !important;
+
+    width: auto !important;
+    height: 82px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    padding: 0 28px !important;
+
+    box-sizing: border-box !important;
+
+    z-index: 1000 !important;
+
+    overflow: visible !important;
+}
+
+
+/* SEARCH AREA */
+
+.tb-search-wrapper {
+    position: relative !important;
+
+    flex: 0 0 auto !important;
+
+    width: 410px !important;
+
+    min-width: 410px !important;
+}
+
+
+/* RIGHT SIDE */
+
+.tb-right {
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 12px !important;
+
+    margin-left: auto !important;
+
+    flex: 0 0 auto !important;
+
+    width: auto !important;
+
+    min-width: max-content !important;
+
+    overflow: visible !important;
+}
+
+
+/* NOTIFICATION */
+
+.tb-notification-wrapper {
+    position: relative !important;
+
+    flex: 0 0 auto !important;
+
+    width: auto !important;
+
+    overflow: visible !important;
+}
+
+
+/* USER PROFILE */
+
+.tb-user {
+    position: relative !important;
+
+    width: 205px !important;
+    min-width: 205px !important;
+    max-width: 205px !important;
+
+    height: 58px !important;
+
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+
+    gap: 10px !important;
+
+    flex: 0 0 205px !important;
+
+    overflow: visible !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* PROFILE IMAGE */
+
+.tb-user img,
+.tb-user-placeholder {
+    width: 44px !important;
+    height: 44px !important;
+
+    min-width: 44px !important;
+    max-width: 44px !important;
+
+    min-height: 44px !important;
+    max-height: 44px !important;
+
+    flex: 0 0 44px !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50% !important;
+}
+
+
+/* USER NAME + ROLE */
+
+.tb-user-info {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+
+    flex: 1 1 auto !important;
+
+    min-width: 0 !important;
+
+    width: auto !important;
+
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+
+/* USER NAME */
+
+.tb-user-info strong {
+    display: block !important;
+
+    width: 100% !important;
+    max-width: 130px !important;
+
+    overflow: hidden !important;
+
+    text-overflow: ellipsis !important;
+
+    white-space: nowrap !important;
+
+    color: #172b3f !important;
+
+    font-size: 11px !important;
+}
+
+
+/* USER ROLE */
+
+.tb-user-info small {
+    display: block !important;
+
+    width: 100% !important;
+
+    color: #8a98a6 !important;
+
+    font-size: 8.5px !important;
+}
+
+
+/* ARROW */
+
+.tb-user-arrow {
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    flex: 0 0 25px !important;
+
+    width: 25px !important;
+    min-width: 25px !important;
+
+    height: 25px !important;
+}
+
+
+/* =========================================================
+   DESKTOP ONLY
+   Keep profile information visible.
+========================================================= */
+
+@media (min-width: 701px) {
+
+    .tb-user-info {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .tb-user-arrow {
+        display: flex !important;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   Keep existing mobile behavior.
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .dba-topbar {
+        left: 0 !important;
+        right: 0 !important;
+
+        width: 100% !important;
+
+        height: 68px !important;
+
+        padding: 0 15px !important;
+    }
+
+    .tb-search-wrapper {
+        flex: 1 1 auto !important;
+
+        width: auto !important;
+        min-width: 0 !important;
+    }
+
+    .tb-search {
+        width: 100% !important;
+    }
+
+    .tb-right {
+        flex: 0 0 auto !important;
+        min-width: 0 !important;
+    }
+
+    .tb-user {
+        width: 42px !important;
+        min-width: 42px !important;
+        max-width: 42px !important;
+
+        flex: 0 0 42px !important;
+
+        padding: 0 !important;
+    }
+
+    .tb-user-info,
+    .tb-user-arrow {
+        display: none !important;
+    }
+
+    .tb-user img,
+    .tb-user-placeholder {
+        width: 40px !important;
+        height: 40px !important;
+
+        min-width: 40px !important;
+        max-width: 40px !important;
+
+        flex: 0 0 40px !important;
+    }
+}
